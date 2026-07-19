@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cultivo Rentable de Tilapia — Empieza tu primer tanque con números claros</title>
+<meta name="description" content="Guía práctica + calculadora de ROI para criar tilapia con poca inversión en Latinoamérica. Sabe cuánto invertir y cuándo recuperas tu dinero, antes de empezar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================ TOKENS */
+:root{
+  --abyss:#06333A; --deep:#0A5A62; --teal:#0E7C86; --surf:#3BA9AE;
+  --mist:#EAF4F4; --paper:#FBFCFB; --line:#D7E6E7;
+  --sand:#E7A23C; --sand-deep:#C9861F;
+  --coral:#D8452A;
+  --ink:#10262B; --muted:#5D7075;
+  --display:'Fraunces',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+  --mono:'Space Mono','Courier New',monospace;
+  --wrap:1120px;
+  --r:16px;
+  --shadow:0 18px 50px -22px rgba(6,51,58,.55);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--teal);font-weight:700}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:1.05;letter-spacing:-.015em}
+.num{font-family:var(--mono);font-feature-settings:"tnum" 1}
+
+/* ============================================================ BUTTONS */
+.cta{display:inline-flex;align-items:center;gap:.6em;background:var(--sand);color:#3a2606;
+  font-weight:700;font-size:1.05rem;padding:18px 32px;border-radius:999px;border:none;cursor:pointer;
+  font-family:var(--body);box-shadow:0 12px 28px -8px rgba(201,134,31,.65);
+  transition:transform .15s ease,box-shadow .15s ease;line-height:1.1;text-align:left}
+.cta:hover{transform:translateY(-2px);box-shadow:0 18px 34px -8px rgba(201,134,31,.75)}
+.cta:active{transform:translateY(0)}
+.cta .arw{font-size:1.2em;transition:transform .15s ease}
+.cta:hover .arw{transform:translateX(4px)}
+.cta small{display:block;font-weight:500;font-size:.72rem;opacity:.75;letter-spacing:.01em}
+.cta-ghost{background:transparent;color:var(--deep);box-shadow:none;border:2px solid var(--line);
+  padding:15px 26px}
+.cta-ghost:hover{border-color:var(--teal);background:#fff}
+
+/* ============================================================ WATERLINE (firma) */
+.waterline{display:block;width:100%;height:44px;line-height:0}
+.waterline svg{width:100%;height:100%}
+
+/* ============================================================ HERO */
+.hero{position:relative;background:
+    radial-gradient(120% 90% at 80% -10%, #12707A 0%, var(--deep) 45%, var(--abyss) 100%);
+  color:#fff;padding:22px 0 0;overflow:hidden}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:6px 0 26px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:900;
+  font-size:1.15rem;letter-spacing:-.01em}
+.brand .mk{width:34px;height:34px;border-radius:9px;background:var(--sand);color:var(--abyss);
+  display:grid;place-items:center;font-size:1.15rem}
+.topbar .flags{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;color:#9FCED1;
+  text-transform:uppercase}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+  padding-bottom:70px}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4rem);margin:18px 0 0}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--sand)}
+.hero .sub{font-size:1.18rem;color:#CFE6E7;margin:22px 0 30px;max-width:34ch;font-weight:400}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .actions .cta-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+.hero .actions .cta-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:.86rem;color:#B9DADC}
+.trust span{display:flex;align-items:center;gap:7px}
+.trust b{color:#fff;font-weight:600}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--surf)}
+
+/* hero product mockup */
+.mock{position:relative;justify-self:center;width:100%;max-width:390px}
+.mock .caustic{position:absolute;inset:-40px -30px;background:
+   radial-gradient(closest-side, rgba(59,169,174,.35), transparent 70%);filter:blur(6px);z-index:0}
+.mock .book{position:relative;z-index:2;border-radius:8px;overflow:hidden;
+  box-shadow:0 40px 70px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06);
+  transform:rotate(-3deg);transition:transform .4s ease}
+.mock:hover .book{transform:rotate(-1deg) translateY(-4px)}
+.mock .chip{position:absolute;z-index:3;font-family:var(--mono);font-weight:700;font-size:.72rem;
+  background:#fff;color:var(--deep);padding:9px 13px;border-radius:10px;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:7px;line-height:1}
+.mock .chip .k{color:var(--sand-deep)}
+.chip.c1{top:8%;right:-6%}
+.chip.c2{bottom:12%;left:-8%}
+.chip .big{font-size:1.05rem}
+
+/* ============================================================ SECTION SHELL */
+section{position:relative}
+.pad{padding:84px 0}
+.center{text-align:center;max-width:720px;margin:0 auto}
+.center .eyebrow{color:var(--sand-deep)}
+h2.big{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 0}
+.lead{font-size:1.12rem;color:var(--muted);margin-top:16px}
+.dark{background:var(--abyss);color:#fff}
+.dark .lead{color:#B9DADC}
+.dark .eyebrow{color:var(--surf)}
+
+/* ============================================================ 2 · RECIBIR */
+.receive{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:0 10px 30px -20px rgba(6,51,58,.4)}
+.pcard .top{background:var(--mist);padding:26px 26px 0;display:flex;justify-content:center;
+  border-bottom:1px solid var(--line)}
+.pcard .top img{border-radius:8px 8px 0 0;box-shadow:0 -6px 24px -12px rgba(6,51,58,.5);
+  max-height:230px;width:auto}
+.pcard .body{padding:26px}
+.tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);font-weight:700;
+  background:var(--mist);padding:5px 11px;border-radius:6px}
+.pcard h3{font-size:1.5rem;margin:14px 0 6px}
+.pcard .fmt{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.pcard ul{list-style:none;margin:16px 0 0}
+.pcard li{position:relative;padding:7px 0 7px 28px;font-size:.96rem;border-top:1px dashed var(--line)}
+.pcard li:before{content:"";position:absolute;left:3px;top:14px;width:11px;height:11px;
+  border-radius:3px;background:var(--sand)}
+
+/* ============================================================ 3 · BENEFICIOS */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.ben{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);
+  padding:30px 26px;transition:border-color .2s,background .2s}
+.ben:hover{border-color:var(--surf);background:rgba(59,169,174,.08)}
+.ben .n{font-family:var(--mono);font-size:.8rem;color:var(--surf);font-weight:700}
+.ben h3{font-size:1.28rem;margin:14px 0 8px;color:#fff}
+.ben p{color:#B9DADC;font-size:.96rem}
+
+/* ============================================================ 4 · BONOS */
+.bonos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.bono{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;
+  position:relative;overflow:hidden}
+.bono:before{content:"BONO";position:absolute;top:14px;right:-30px;transform:rotate(45deg);
+  background:var(--sand);color:#3a2606;font-family:var(--mono);font-weight:700;font-size:.62rem;
+  letter-spacing:.15em;padding:5px 40px}
+.bono .ic{font-size:1.7rem}
+.bono h3{font-size:1.2rem;margin:12px 0 6px}
+.bono p{font-size:.92rem;color:var(--muted)}
+.bono .val{font-family:var(--mono);font-size:.8rem;color:var(--sand-deep);font-weight:700;
+  margin-top:12px;display:inline-block}
+.bono .val s{color:var(--muted);opacity:.7}
+
+/* ============================================================ 5 · OFERTA */
+.offer{background:radial-gradient(120% 120% at 50% 0%, #0d6a73, var(--abyss));color:#fff}
+.offer-box{max-width:640px;margin:0 auto;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:40px;text-align:center;
+  backdrop-filter:blur(4px)}
+.timer-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin:6px 0 26px}
+.timer-lbl{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#F4B15C}
+.timer{display:flex;gap:10px}
+.timer .cell{background:var(--abyss);border:1px solid rgba(244,177,92,.4);border-radius:12px;
+  padding:12px 6px;min-width:74px}
+.timer .cell b{font-family:var(--mono);font-size:2.1rem;font-weight:700;color:#fff;display:block;
+  line-height:1}
+.timer .cell span{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#9FCED1;margin-top:5px;display:block}
+.price{display:flex;align-items:baseline;justify-content:center;gap:14px;margin:8px 0 6px}
+.price .old{font-family:var(--mono);font-size:1.3rem;color:#8FB4B7;text-decoration:line-through}
+.price .now{font-family:var(--display);font-weight:900;font-size:3.6rem;color:#fff;line-height:1}
+.price .now small{font-size:1.2rem;font-weight:600;vertical-align:super;margin-right:2px}
+.price-note{font-size:.9rem;color:#B9DADC;margin-bottom:26px}
+.offer .cta{font-size:1.2rem;padding:20px 40px}
+.pay{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:22px;
+  font-size:.8rem;color:#9FCED1;font-family:var(--mono)}
+.pay span{display:flex;align-items:center;gap:6px}
+
+/* ============================================================ 6 · CARRUSEL */
+.carousel{margin-top:48px}
+.track{display:flex;gap:20px;overflow-x:auto;padding:14px 24px 30px;scroll-snap-type:x mandatory;
+  scrollbar-width:thin;scrollbar-color:var(--teal) transparent}
+.track::-webkit-scrollbar{height:8px}
+.track::-webkit-scrollbar-thumb{background:var(--teal);border-radius:4px}
+.slide{flex:0 0 auto;width:300px;scroll-snap-align:center;background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:14px;box-shadow:0 14px 34px -20px rgba(6,51,58,.5)}
+.slide img{border-radius:8px;border:1px solid var(--line);width:100%}
+.slide .cap{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:12px;
+  letter-spacing:.03em;text-align:center}
+.carousel .hint{text-align:center;font-family:var(--mono);font-size:.74rem;color:var(--muted);
+  letter-spacing:.1em}
+
+/* ============================================================ 7 · DEPOIMENTOS */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.testi{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;
+  display:flex;flex-direction:column;gap:16px}
+.stars{color:var(--sand);letter-spacing:2px;font-size:1rem}
+.testi p{font-size:1rem;color:var(--ink);flex:1;font-style:italic}
+.who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.who .av{width:42px;height:42px;border-radius:50%;background:var(--deep);color:#fff;
+  display:grid;place-items:center;font-family:var(--display);font-weight:900}
+.who b{display:block;font-size:.95rem}
+.who span{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+
+/* ============================================================ 8 · GARANTIA */
+.guarantee{background:var(--mist)}
+.guar-grid{display:grid;grid-template-columns:180px 1fr;gap:40px;align-items:center;
+  max-width:840px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:40px}
+.seal{width:180px;height:180px;border-radius:50%;background:
+   conic-gradient(from -45deg,var(--deep),var(--teal),var(--surf),var(--teal),var(--deep));
+  display:grid;place-items:center;color:#fff;text-align:center;box-shadow:var(--shadow)}
+.seal .inner{width:150px;height:150px;border-radius:50%;border:2px dashed rgba(255,255,255,.5);
+  display:grid;place-items:center;align-content:center}
+.seal .d{font-family:var(--display);font-weight:900;font-size:3.2rem;line-height:.9}
+.seal .t{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+.guar-grid h2{font-size:1.9rem}
+.guar-grid p{color:var(--muted);margin-top:12px;font-size:1.02rem}
+
+/* ============================================================ 9 · FAQ */
+.faq{max-width:800px;margin:48px auto 0}
+.q{border-bottom:1px solid var(--line)}
+.q summary{list-style:none;cursor:pointer;padding:22px 44px 22px 44px;position:relative;
+  font-family:var(--display);font-weight:600;font-size:1.18rem;color:var(--ink)}
+.q summary::-webkit-details-marker{display:none}
+.q summary .qn{position:absolute;left:0;top:22px;font-family:var(--mono);font-size:.8rem;
+  color:var(--teal);font-weight:700}
+.q summary:after{content:"+";position:absolute;right:8px;top:18px;font-size:1.6rem;color:var(--teal);
+  transition:transform .2s}
+.q[open] summary:after{transform:rotate(45deg)}
+.q .a{padding:0 44px 24px;color:var(--muted);font-size:1rem}
+
+/* ============================================================ FINAL CTA + FOOTER */
+.finalcta{background:var(--deep);color:#fff;text-align:center}
+.finalcta h2{font-size:clamp(1.9rem,4vw,2.7rem)}
+.finalcta p{color:#B9DADC;margin:14px auto 30px;max-width:44ch}
+footer{background:var(--abyss);color:#7FA4A8;padding:36px 0;text-align:center;font-size:.86rem}
+footer .brand{justify-content:center;color:#fff;margin-bottom:14px;font-size:1rem}
+footer .brand .mk{width:28px;height:28px;font-size:1rem}
+footer a{color:#9FCED1}
+footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7}
+
+/* ============================================================ STICKY MÓVIL */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--line);
+  padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;
+  box-shadow:0 -8px 24px -12px rgba(6,51,58,.4)}
+.sticky .p{font-family:var(--mono);font-weight:700;color:var(--deep)}
+.sticky .p s{color:var(--muted);font-weight:400;font-size:.8em;margin-right:6px}
+.sticky .cta{padding:13px 22px;font-size:.95rem}
+
+/* ============================================================ RESPONSIVE */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:20px;padding-bottom:50px}
+  .mock{max-width:300px;margin-top:10px}
+  .receive,.benefits,.bonos,.testis{grid-template-columns:1fr}
+  .benefits,.bonos{gap:16px}
+  .guar-grid{grid-template-columns:1fr;text-align:center;padding:32px 24px}
+  .seal{margin:0 auto}
+  .pad{padding:60px 0}
+  .topbar .flags{display:none}
+}
+@media (max-width:620px){
+  .sticky{display:flex}
+  body{padding-bottom:72px}
+  .hero h1{font-size:2.3rem}
+  .timer .cell{min-width:58px;padding:10px 4px}
+  .timer .cell b{font-size:1.6rem}
+  .offer-box{padding:28px 20px}
+  .price .now{font-size:2.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ====================================================== 1 · HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="mk">🐟</span> Cultivo Rentable de Tilapia</div>
+      <div class="flags">MX · CO · PE · EC · AR · CL</div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" style="color:#8FE0E4">Guía práctica + calculadora</span>
+        <h1>Tu primer tanque de tilapia, <em>rentable</em> desde el papel.</h1>
+        <p class="sub">Antes de gastar un solo peso: sabe cuánto invertir, cuánto vas a producir
+          y en cuántos ciclos recuperas tu dinero — con tus precios locales.</p>
+        <div class="actions">
+          <a href="#oferta" class="cta">Quiero empezar hoy
+            <span class="arw">→</span></a>
+          <a href="#recibir" class="cta cta-ghost">Ver qué incluye</a>
+        </div>
+        <div class="trust">
+          <span><i class="dot"></i> <b>PDF</b> + <b>Excel</b> editable</span>
+          <span><i class="dot"></i> Acceso <b>inmediato</b></span>
+          <span><i class="dot"></i> Garantía <b>7 días</b></span>
+        </div>
+      </div>
+      <div class="mock">
+        <div class="caustic"></div>
+        <img class="book" src="img/ebook-cover.png" alt="Portada de la guía Tilapia Rentable">
+        <div class="chip c1"><span class="k">ROI</span> <span class="big num">+24%</span></div>
+        <div class="chip c2">Recuperas en <span class="big num">2,9</span> ciclos</div>
+      </div>
+    </div>
+  </div>
+  <span class="waterline" aria-hidden="true">
+    <svg viewBox="0 0 1440 44" preserveAspectRatio="none">
+      <path fill="#FBFCFB" d="M0,22 C240,44 480,0 720,14 C960,28 1200,44 1440,20 L1440,44 L0,44 Z">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite"
+          values="M0,22 C240,44 480,0 720,14 C960,28 1200,44 1440,20 L1440,44 L0,44 Z;
+                  M0,18 C240,2 480,40 720,26 C960,10 1200,2 1440,26 L1440,44 L0,44 Z;
+                  M0,22 C240,44 480,0 720,14 C960,28 1200,44 1440,20 L1440,44 L0,44 Z"/>
+      </path>
+    </svg>
+  </span>
+</header>
+
+<!-- ====================================================== 2 · RECIBIR -->
+<section id="recibir" class="pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Lo que recibes hoy</span>
+      <h2 class="big">Dos herramientas que trabajan juntas</h2>
+      <p class="lead">Una te enseña el camino. La otra te dice, con tus números, si el camino
+        te conviene. Las recibes al instante después de tu compra.</p>
+    </div>
+    <div class="receive">
+      <article class="pcard">
+        <div class="top"><img src="img/ebook-costos.png" alt="Página interna de la guía con tabla de costos"></div>
+        <div class="body">
+          <span class="tag">Producto principal · PDF</span>
+          <h3>La Guía Tilapia Rentable</h3>
+          <div class="fmt">12 páginas · español · lectura en una tarde</div>
+          <ul>
+            <li>Cuánto cuesta empezar de verdad (2 escenarios de inversión detallados)</li>
+            <li>El error financiero #1 que quiebra al pequeño productor</li>
+            <li>Flujo de caja mes a mes de tu primer ciclo de 6 meses</li>
+            <li>Cómo vender tu cosecha y fijar tu precio por kilo</li>
+            <li>Plan de acción de 30-60-90 días, con checklists para imprimir</li>
+          </ul>
+        </div>
+      </article>
+      <article class="pcard">
+        <div class="top"><img src="img/calculadora.png" alt="Calculadora de retorno en Excel"></div>
+        <div class="body">
+          <span class="tag">Incluido · Excel / Google Sheets</span>
+          <h3>Calculadora de Retorno (ROI)</h3>
+          <div class="fmt">editable · resultados automáticos</div>
+          <ul>
+            <li>Cambias solo las celdas amarillas con los precios de tu ciudad</li>
+            <li>Calcula sola tu inversión total y tu costo real por kilo</li>
+            <li>Te dice tu ganancia por ciclo y tu margen real</li>
+            <li>Muestra el capital mínimo que debes tener antes de sembrar</li>
+            <li>Funciona igual en México, Colombia, Perú, Ecuador, Argentina y Chile</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 3 · BENEFICIOS -->
+<section class="dark pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Por qué este material</span>
+      <h2 class="big">No es otro manual técnico gratis</h2>
+      <p class="lead">Hay cientos de videos que te explican el pH del agua. Ninguno te dice si vas
+        a ganar dinero. Nosotros empezamos justo por ahí.</p>
+    </div>
+    <div class="benefits">
+      <div class="ben"><div class="n">01</div><h3>Enfoque en el dinero</h3>
+        <p>Mientras otros hablan de biología, aquí hablamos de inversión, costos y retorno.
+          Lo que decide si tu proyecto vive o muere.</p></div>
+      <div class="ben"><div class="n">02</div><h3>Con tus precios, no los míos</h3>
+        <p>No copias cifras ajenas: la calculadora usa los precios de alevín, alimento y venta
+          de tu propia ciudad y moneda.</p></div>
+      <div class="ben"><div class="n">03</div><h3>Directo, sin relleno</h3>
+        <p>Nada de 200 páginas que nunca terminas. En una tarde sabes si este negocio es para ti
+          y por dónde empezar.</p></div>
+      <div class="ben"><div class="n">04</div><h3>Pensado para LATAM</h3>
+        <p>Escenarios y ejemplos válidos para seis países, no un texto traducido que no encaja
+          con tu realidad.</p></div>
+      <div class="ben"><div class="n">05</div><h3>Evitas el error caro</h3>
+        <p>El capítulo del "valle de los 6 meses" te ahorra el error que hace quebrar a la mayoría
+          de los principiantes.</p></div>
+      <div class="ben"><div class="n">06</div><h3>Listo para actuar</h3>
+        <p>Terminas con un plan de 30-60-90 días y una checklist concreta, no con dudas y más
+          preguntas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 4 · BONOS -->
+<section class="pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Además, sin costo extra</span>
+      <h2 class="big">3 bonos que se suman a tu compra</h2>
+      <p class="lead">Pensados para que no te quedes con la teoría, sino con herramientas que usas
+        desde el primer día.</p>
+    </div>
+    <div class="bonos">
+      <div class="bono"><div class="ic">📊</div>
+        <h3>Calculadora de ROI editable</h3>
+        <p>La hoja de cálculo que convierte tus precios locales en una proyección real de ganancia
+          y recuperación.</p>
+        <span class="val"><s>Valor $27</s> &nbsp;Incluido gratis</span></div>
+      <div class="bono"><div class="ic">🗓️</div>
+        <h3>Plan de acción 30-60-90</h3>
+        <p>Checklist imprimible con exactamente qué hacer, en qué orden, antes y después de sembrar
+          tu primer lote.</p>
+        <span class="val"><s>Valor $17</s> &nbsp;Incluido gratis</span></div>
+      <div class="bono"><div class="ic">🧾</div>
+        <h3>Guía de costos por país</h3>
+        <p>Referencia de en qué gastar y dónde suelen esconderse los costos que descapitalizan tu
+          ciclo.</p>
+        <span class="val"><s>Valor $17</s> &nbsp;Incluido gratis</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 5 · OFERTA + TIMER -->
+<section id="oferta" class="offer pad">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:34px">
+      <span class="eyebrow" style="color:#F4B15C">Oferta de lanzamiento</span>
+      <h2 class="big" style="color:#fff">Todo esto, por menos que una tilapia en el mercado</h2>
+    </div>
+    <div class="offer-box">
+      <div class="timer-wrap">
+        <span class="timer-lbl">Esta oferta expira en</span>
+        <div class="timer" id="timer">
+          <div class="cell"><b id="t-min">15</b><span>min</span></div>
+          <div class="cell"><b id="t-sec">00</b><span>seg</span></div>
+        </div>
+      </div>
+      <div class="price">
+        <span class="old num">$47</span>
+        <span class="now"><small>USD</small><span class="num">14</span></span>
+      </div>
+      <p class="price-note">Pago único. Sin suscripciones. Acceso de por vida a las actualizaciones.</p>
+      <a href="#comprar" id="btn-comprar" class="cta">Comprar y recibir ahora
+        <span class="arw">→</span></a>
+      <div class="pay">
+        <span>🔒 Pago seguro</span><span>💳 Tarjeta / PIX / OXXO</span><span>⚡ Entrega inmediata</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 6 · CARRUSEL -->
+<section class="pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Un vistazo por dentro</span>
+      <h2 class="big">Ejemplos reales del material</h2>
+      <p class="lead">Sin humo: estas son páginas reales de la guía y de la calculadora que vas a
+        recibir.</p>
+    </div>
+  </div>
+  <div class="carousel">
+    <div class="track">
+      <figure class="slide"><img src="img/ebook-cover.png" alt="Portada">
+        <figcaption class="cap">Portada · edición LATAM</figcaption></figure>
+      <figure class="slide"><img src="img/ebook-costos.png" alt="Costos de inversión">
+        <figcaption class="cap">Cap. 2 · Cuánto cuesta empezar</figcaption></figure>
+      <figure class="slide"><img src="img/ebook-flujo.png" alt="Flujo de caja">
+        <figcaption class="cap">Cap. 4 · Flujo de caja del ciclo</figcaption></figure>
+      <figure class="slide"><img src="img/ebook-vender.png" alt="Cómo vender">
+        <figcaption class="cap">Cap. 6 · Cómo vender tu cosecha</figcaption></figure>
+      <figure class="slide"><img src="img/calculadora.png" alt="Calculadora de ROI">
+        <figcaption class="cap">Bono · Calculadora de retorno</figcaption></figure>
+    </div>
+    <p class="hint">← desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- ====================================================== 7 · DEPOIMENTOS -->
+<section class="dark pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Quienes ya empezaron</span>
+      <h2 class="big">Lo que dicen los primeros lectores</h2>
+    </div>
+    <!-- IMPORTANTE: reemplaza estos testimonios por reseñas REALES de clientes antes de publicar. -->
+    <div class="testis">
+      <figure class="testi">
+        <div class="stars">★★★★★</div>
+        <p>“Llevaba meses viendo videos y seguía sin animarme. La calculadora me mostró en 20 minutos
+          que sí me daba. Ya monté mi primer tanque.”</p>
+        <figcaption class="who"><span class="av">J</span>
+          <span><b>Jorge M.</b><span>Veracruz, México</span></span></figcaption>
+      </figure>
+      <figure class="testi">
+        <div class="stars">★★★★★</div>
+        <p>“Lo mejor es que no es puro tecnicismo. Entendí por fin dónde estaba perdiendo plata con
+          el alimento. Muy claro y al grano.”</p>
+        <figcaption class="who"><span class="av">D</span>
+          <span><b>Diana R.</b><span>Neiva, Colombia</span></span></figcaption>
+      </figure>
+      <figure class="testi">
+        <div class="stars">★★★★★</div>
+        <p>“El plan de 30-60-90 días me ordenó la cabeza. Por primera vez sé exactamente qué hacer
+          antes de comprar los alevines.”</p>
+        <figcaption class="who"><span class="av">L</span>
+          <span><b>Luis A.</b><span>Cusco, Perú</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 8 · GARANTIA -->
+<section class="guarantee pad">
+  <div class="wrap">
+    <div class="guar-grid">
+      <div class="seal"><div class="inner">
+        <span class="d">7</span><span class="t">días</span>
+      </div></div>
+      <div>
+        <span class="eyebrow">Riesgo cero para ti</span>
+        <h2>Garantía incondicional de 7 días</h2>
+        <p>Lee la guía, abre la calculadora, mete tus números. Si en 7 días sientes que no era para
+          ti, escribes un correo y te devolvemos el 100% de tu dinero. Sin preguntas, sin trámites,
+          sin resentimientos. El riesgo lo asumimos nosotros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== 9 · FAQ -->
+<section class="pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Antes de decidir</span>
+      <h2 class="big">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq">
+      <details class="q"><summary><span class="qn">01</span>¿Necesito experiencia previa en acuicultura?</summary>
+        <div class="a">No. La guía está pensada para principiantes: empieza desde cuánto invertir y
+          cómo planear, no da por sentado que ya sabes criar peces. Si ya tienes experiencia, te
+          servirá sobre todo la parte financiera y la calculadora.</div></details>
+      <details class="q"><summary><span class="qn">02</span>¿Cómo y cuándo recibo el material?</summary>
+        <div class="a">De inmediato. Apenas se confirma tu pago recibes por correo el acceso para
+          descargar el PDF y la calculadora. Puedes abrirlos en tu celular o computadora.</div></details>
+      <details class="q"><summary><span class="qn">03</span>¿Sirve para mi país y mi moneda?</summary>
+        <div class="a">Sí. Los ejemplos usan dólares como referencia, pero la calculadora está hecha
+          para que pongas los precios y la moneda de tu ciudad. Funciona igual en México, Colombia,
+          Perú, Ecuador, Argentina y Chile.</div></details>
+      <details class="q"><summary><span class="qn">04</span>¿Es un curso en video o un PDF?</summary>
+        <div class="a">Es una guía en PDF (12 páginas, directa) más una calculadora en Excel/Google
+          Sheets. La elegimos así a propósito: la lees en una tarde y actúas, en vez de posponer horas
+          de video.</div></details>
+      <details class="q"><summary><span class="qn">05</span>¿Y si no me gusta?</summary>
+        <div class="a">Tienes 7 días de garantía incondicional. Si no es para ti, te devolvemos el
+          100% de tu dinero con un simple correo. Sin preguntas.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== FINAL CTA -->
+<section class="finalcta pad">
+  <div class="wrap center">
+    <span class="eyebrow" style="color:#8FE0E4">Es tu decisión</span>
+    <h2>Puedes seguir dudando… o decidir con números</h2>
+    <p>En una tarde tendrás más claridad que el 90% de quienes empiezan en la tilapia. El primer paso
+      es abrir la calculadora.</p>
+    <a href="#comprar" class="cta">Empezar ahora por $14 USD <span class="arw">→</span></a>
+  </div>
+</section>
+
+<!-- ====================================================== FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="mk">🐟</span> Cultivo Rentable de Tilapia</div>
+    <div>cultivorentabledetilapia.online</div>
+    <div class="fine">© 2026 Cultivo Rentable de Tilapia. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<!-- ====================================================== STICKY MÓVIL -->
+<div class="sticky">
+  <div class="p"><s>$47</s> $14 USD</div>
+  <a href="#oferta" class="cta">Quiero mi guía <span class="arw">→</span></a>
+</div>
+
+<script>
+/* ---- Enlace de checkout: reemplaza '#' por tu link de Hotmart/Payhip ---- */
+const CHECKOUT_URL = "#";
+document.querySelectorAll('a[href="#comprar"]').forEach(a=>{
+  if(CHECKOUT_URL!=="#"){ a.setAttribute('href', CHECKOUT_URL); a.setAttribute('target','_blank'); }
+});
+
+/* ---- Temporizador de 15 minutos (persistente por visita) ---- */
+(function(){
+  const KEY='tilapia_offer_deadline';
+  let dl = localStorage.getItem(KEY);
+  const now = Date.now();
+  if(!dl || +dl < now){ dl = now + 15*60*1000; localStorage.setItem(KEY, dl); }
+  const min = document.getElementById('t-min'), sec = document.getElementById('t-sec');
+  function tick(){
+    let diff = Math.max(0, Math.floor((+dl - Date.now())/1000));
+    const m = Math.floor(diff/60), s = diff%60;
+    if(min) min.textContent = String(m).padStart(2,'0');
+    if(sec) sec.textContent = String(s).padStart(2,'0');
+    if(diff<=0){ clearInterval(iv); }
+  }
+  tick(); const iv = setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
