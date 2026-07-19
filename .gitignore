@@ -4,10 +4,6 @@ __pycache__/
 .venv/
 venv/
 
-# OS / temp
-.DS_Store
+# Temporales de LibreOffice / sistema
+.~lock.*
 *.tmp
-~$*
-
-# LibreOffice locks
-.~lock.*#
