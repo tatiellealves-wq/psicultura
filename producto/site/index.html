@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cultivo Rentable de Tilapia — Empieza tu primer tanque con números claros</title>
 <meta name="description" content="Guía práctica + calculadora de ROI para criar tilapia con poca inversión en Latinoamérica. Sabe cuánto invertir y cuándo recuperas tu dinero, antes de empezar.">
+<meta name="theme-color" content="#06333A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -27,8 +28,14 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;
   -webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
+h1,h2,h3{text-wrap:balance}
+/* Accesibilidad: foco visible para teclado + sin retardo de toque */
+a,button,summary{touch-action:manipulation}
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:3px solid var(--sand);outline-offset:3px;border-radius:6px}
+.dark a:focus-visible,.offer a:focus-visible,.finalcta a:focus-visible{outline-color:#F4B15C}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
 .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
   color:var(--teal);font-weight:700}
@@ -286,18 +293,18 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
           y en cuántos ciclos recuperas tu dinero — con tus precios locales.</p>
         <div class="actions">
           <a href="#oferta" class="cta">Quiero empezar hoy
-            <span class="arw">→</span></a>
+            <span class="arw" aria-hidden="true">→</span></a>
           <a href="#recibir" class="cta cta-ghost">Ver qué incluye</a>
         </div>
         <div class="trust">
-          <span><i class="dot"></i> <b>PDF</b> + <b>Excel</b> editable</span>
-          <span><i class="dot"></i> Acceso <b>inmediato</b></span>
-          <span><i class="dot"></i> Garantía <b>7 días</b></span>
+          <span><i class="dot" aria-hidden="true"></i> <b>PDF</b> + <b>Excel</b> editable</span>
+          <span><i class="dot" aria-hidden="true"></i> Acceso <b>inmediato</b></span>
+          <span><i class="dot" aria-hidden="true"></i> Garantía <b>7 días</b></span>
         </div>
       </div>
       <div class="mock">
         <div class="caustic"></div>
-        <img class="book" src="img/ebook-cover.png" alt="Portada de la guía Tilapia Rentable">
+        <img class="book" src="img/ebook-cover.png" width="1158" height="1638" fetchpriority="high" alt="Portada de la guía Tilapia Rentable">
         <div class="chip c1"><span class="k">ROI</span> <span class="big num">+24%</span></div>
         <div class="chip c2">Recuperas en <span class="big num">2,9</span> ciclos</div>
       </div>
@@ -326,7 +333,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     </div>
     <div class="receive">
       <article class="pcard">
-        <div class="top"><img src="img/ebook-costos.png" alt="Página interna de la guía con tabla de costos"></div>
+        <div class="top"><img src="img/ebook-costos.png" width="1158" height="1638" loading="lazy" alt="Página interna de la guía con tabla de costos"></div>
         <div class="body">
           <span class="tag">Producto principal · PDF</span>
           <h3>La Guía Tilapia Rentable</h3>
@@ -341,7 +348,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         </div>
       </article>
       <article class="pcard">
-        <div class="top"><img src="img/calculadora.png" alt="Calculadora de retorno en Excel"></div>
+        <div class="top"><img src="img/calculadora.png" width="1440" height="992" loading="lazy" alt="Calculadora de retorno en Excel"></div>
         <div class="body">
           <span class="tag">Incluido · Excel / Google Sheets</span>
           <h3>Calculadora de Retorno (ROI)</h3>
@@ -430,7 +437,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     <div class="offer-box">
       <div class="timer-wrap">
         <span class="timer-lbl">Esta oferta expira en</span>
-        <div class="timer" id="timer">
+        <div class="timer" id="timer" aria-hidden="true">
           <div class="cell"><b id="t-min">15</b><span>min</span></div>
           <div class="cell"><b id="t-sec">00</b><span>seg</span></div>
         </div>
@@ -441,7 +448,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       </div>
       <p class="price-note">Pago único. Sin suscripciones. Acceso de por vida a las actualizaciones.</p>
       <a href="#comprar" id="btn-comprar" class="cta">Comprar y recibir ahora
-        <span class="arw">→</span></a>
+        <span class="arw" aria-hidden="true">→</span></a>
       <div class="pay">
         <span>🔒 Pago seguro</span><span>💳 Tarjeta / PIX / OXXO</span><span>⚡ Entrega inmediata</span>
       </div>
@@ -461,15 +468,15 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   </div>
   <div class="carousel">
     <div class="track">
-      <figure class="slide"><img src="img/ebook-cover.png" alt="Portada">
+      <figure class="slide"><img src="img/ebook-cover.png" width="1158" height="1638" loading="lazy" alt="Portada de la guía">
         <figcaption class="cap">Portada · edición LATAM</figcaption></figure>
-      <figure class="slide"><img src="img/ebook-costos.png" alt="Costos de inversión">
+      <figure class="slide"><img src="img/ebook-costos.png" width="1158" height="1638" loading="lazy" alt="Tabla de costos de inversión">
         <figcaption class="cap">Cap. 2 · Cuánto cuesta empezar</figcaption></figure>
-      <figure class="slide"><img src="img/ebook-flujo.png" alt="Flujo de caja">
+      <figure class="slide"><img src="img/ebook-flujo.png" width="1158" height="1638" loading="lazy" alt="Flujo de caja del ciclo">
         <figcaption class="cap">Cap. 4 · Flujo de caja del ciclo</figcaption></figure>
-      <figure class="slide"><img src="img/ebook-vender.png" alt="Cómo vender">
+      <figure class="slide"><img src="img/ebook-vender.png" width="1158" height="1638" loading="lazy" alt="Página sobre cómo vender la cosecha">
         <figcaption class="cap">Cap. 6 · Cómo vender tu cosecha</figcaption></figure>
-      <figure class="slide"><img src="img/calculadora.png" alt="Calculadora de ROI">
+      <figure class="slide"><img src="img/calculadora.png" width="1440" height="992" loading="lazy" alt="Calculadora de retorno (ROI)">
         <figcaption class="cap">Bono · Calculadora de retorno</figcaption></figure>
     </div>
     <p class="hint">← desliza para ver más →</p>
@@ -569,7 +576,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     <h2>Puedes seguir dudando… o decidir con números</h2>
     <p>En una tarde tendrás más claridad que el 90% de quienes empiezan en la tilapia. El primer paso
       es abrir la calculadora.</p>
-    <a href="#comprar" class="cta">Empezar ahora por $6,90 USD <span class="arw">→</span></a>
+    <a href="#comprar" class="cta">Empezar ahora por $6,90 USD <span class="arw" aria-hidden="true">→</span></a>
   </div>
 </section>
 
@@ -585,7 +592,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 <!-- ====================================================== STICKY MÓVIL -->
 <div class="sticky">
   <div class="p"><s>$19</s> $6,90 USD</div>
-  <a href="#oferta" class="cta">Quiero mi guía <span class="arw">→</span></a>
+  <a href="#oferta" class="cta">Quiero mi guía <span class="arw" aria-hidden="true">→</span></a>
 </div>
 
 <script>
