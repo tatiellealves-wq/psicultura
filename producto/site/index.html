@@ -597,7 +597,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 
 <script>
 /* ---- Enlace de checkout: reemplaza '#' por tu link de Hotmart/Payhip ---- */
-const CHECKOUT_URL = "#";
+const CHECKOUT_URL = "https://pay.hotmart.com/N106802906U?checkoutMode=10";
 document.querySelectorAll('a[href="#comprar"]').forEach(a=>{
   if(CHECKOUT_URL!=="#"){ a.setAttribute('href', CHECKOUT_URL); a.setAttribute('target','_blank'); }
 });
