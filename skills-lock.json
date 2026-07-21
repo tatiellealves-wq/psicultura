@@ -25,6 +25,12 @@
       "skillPath": "skills/hyperframes/SKILL.md",
       "computedHash": "c44ac74d8cc637eac3bc21d6565801faaebf50a5fed030129f709ece44171f7a"
     },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "c20bea275d2d86a5df405d36ee85e1104964fb7c987101ac18edd8573e316d76"
+    },
     "supabase-postgres-best-practices": {
       "source": "supabase/agent-skills",
       "sourceType": "github",
