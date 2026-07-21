@@ -7,3 +7,6 @@ venv/
 # Temporales de LibreOffice / sistema
 .~lock.*
 *.tmp
+
+# Artefactos de build (se regeneran)
+*.zip
