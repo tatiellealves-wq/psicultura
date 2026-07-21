@@ -1,0 +1,4 @@
+# Deploy de la landing "Cultivo Rentable de Tilapia"
+[build]
+  publish = "producto/site"
+  command = ""

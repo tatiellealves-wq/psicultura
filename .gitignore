@@ -10,3 +10,6 @@ venv/
 
 # Artefactos de build (se regeneran)
 *.zip
+
+# Artifact generado (build)
+producto/site/_artifact.html
