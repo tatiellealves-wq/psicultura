@@ -275,6 +275,22 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 /* ============================================================ REVEAL on scroll */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+/* ============================================================ HOW IT WORKS */
+.how{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:44px}
+.step .no{font-family:var(--mono);font-weight:700;font-size:.78rem;color:var(--sand-2);letter-spacing:.1em}
+.step .ico{width:54px;height:54px;border-radius:15px;background:var(--mist);border:1px solid var(--line2);
+  display:grid;place-items:center;color:var(--teal);margin:14px 0}
+.step .ico .ic{width:27px;height:27px}
+.step h3{font-size:1.32rem;margin-bottom:6px}
+.step p{color:var(--ink2);font-size:.98rem}
+/* ============================================================ AUTHORITY */
+.authority{background:var(--abyss);color:#fff}
+.astrip{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:center;margin-top:42px}
+.astat .big{font-family:var(--disp);font-weight:900;font-size:2.7rem;color:var(--surf);line-height:1}
+.astat .lbl{color:#B7D4D3;font-size:.98rem;margin-top:10px}
+.authority .src{text-align:center;font-family:var(--mono);font-size:.72rem;color:#6E8F91;margin-top:28px;letter-spacing:.02em}
+.authority .head h2{color:#fff}.authority .eyebrow{color:var(--surf)}
 /* ============================================================ RESPONSIVE */
 @media (max-width:920px){
   .hero-grid,.problem .inner,.why .grid,.tool{grid-template-columns:1fr;gap:26px}
@@ -445,6 +461,24 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   </div>
 </section>
 
+<!-- ====================================================== HOW IT WORKS -->
+<section class="how sec">
+  <div class="wrap">
+    <div class="head center">
+      <span class="klabel" style="justify-content:center"><span class="bar"></span><span class="eyebrow">Así de simple</span><span class="bar"></span></span>
+      <h2>De la duda a la decisión, en 3 pasos</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="no">Paso 01</div><span class="ico"><svg class="ic"><use href="#i-doc"/></svg></span>
+        <h3>Descarga todo</h3><p>Apenas confirmas tu pago, recibes la guía y la calculadora al instante, en tu correo.</p></div>
+      <div class="step"><div class="no">Paso 02</div><span class="ico"><svg class="ic"><use href="#i-grid"/></svg></span>
+        <h3>Mete tus números</h3><p>Cambias las celdas amarillas con los precios de alevín, alimento y venta de tu ciudad.</p></div>
+      <div class="step"><div class="no">Paso 03</div><span class="ico"><svg class="ic"><use href="#i-target"/></svg></span>
+        <h3>Decides con certeza</h3><p>En una tarde sabes cuánto vas a ganar, cuánto invertir y por dónde empezar.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ====================================================== WHY / BENEFITS -->
 <section class="why sec">
   <div class="wrap grid">
@@ -468,6 +502,22 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <div class="b"><span class="ico"><svg class="ic"><use href="#i-target"/></svg></span>
         <h4>Listo para actuar</h4><p>Terminas con un plan de 30-60-90 días y una checklist concreta, no con más dudas.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- ====================================================== AUTHORITY (prueba con datos) -->
+<section class="authority sec">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">La oportunidad es real</span>
+      <h2 style="margin-top:12px">No es una moda — es un mercado que crece</h2>
+    </div>
+    <div class="astrip">
+      <div class="astat"><div class="big mono">58%</div><div class="lbl">de la producción acuícola de Colombia ya es tilapia</div></div>
+      <div class="astat"><div class="big mono">24–64%</div><div class="lbl">de retorno anual documentado (TIR), según el manejo</div></div>
+      <div class="astat"><div class="big mono">6+</div><div class="lbl">países de la región donde la calculadora ya aplica</div></div>
+    </div>
+    <p class="src">Datos de referencia del sector acuícola. Tu resultado depende de tu manejo y de tus precios locales.</p>
   </div>
 </section>
 
@@ -585,6 +635,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <div class="a">Es una guía en PDF (12 páginas, directa) más una calculadora en Excel/Google Sheets. Lo elegimos así a propósito: la lees en una tarde y actúas, en vez de posponer horas de video.</div></details>
       <details class="q"><summary><span class="qn">05</span>¿Y si no me gusta?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Tienes 7 días de garantía incondicional. Si no es para ti, te devolvemos el 100% de tu dinero con un simple correo. Sin preguntas.</div></details>
+      <details class="q"><summary><span class="qn">06</span>¿Por qué cuesta tan poco?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+        <div class="a">Es un precio de lanzamiento, a propósito. Prefiero que este material llegue a mucha gente y recibir las primeras opiniones, antes que venderlo caro a unos pocos. El contenido es el mismo que en cursos que cuestan diez veces más — solo que directo al grano, sin relleno.</div></details>
     </div>
   </div>
 </section>
@@ -635,7 +687,7 @@ document.querySelectorAll('a[href="#comprar"]').forEach(a=>{
 /* Revelación al hacer scroll (se desactiva con prefers-reduced-motion) */
 (function(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
-  const els = document.querySelectorAll('.head, .tool, .blist .b, .di, .offerbox, .guarbox, .pc, .stat, .slide, .final .wrap > *');
+  const els = document.querySelectorAll('.head, .tool, .blist .b, .di, .step, .astat, .offerbox, .guarbox, .pc, .stat, .slide, .final .wrap > *');
   els.forEach(function(el){ el.classList.add('reveal'); });
   const io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
