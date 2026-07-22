@@ -1,0 +1,34 @@
+name: Deploy a Hostinger (FTP)
+
+# Cada push que toque el sitio publica automáticamente en Hostinger por FTP.
+# Los runners de GitHub SÍ tienen FTP habilitado, así que la subida ocurre allí.
+on:
+  push:
+    branches: [ claude/latam-piscicultura-pdf-market-pey8iu ]
+    paths:
+      - 'producto/site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Subir el sitio por FTP a public_html del dominio
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./producto/site/
+          server-dir: /domains/cultivorentabledetilapia.online/public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/_artifact.html
+            **/_calc_mock.html
