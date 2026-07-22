@@ -80,7 +80,7 @@ a,button,summary{touch-action:manipulation}
 
 .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center;padding:44px 0 76px}
 .hero h1{font-size:clamp(2.55rem,5.6vw,4.15rem);margin:20px 0 0}
-.hero h1 .u{background:linear-gradient(transparent 62%, rgba(228,160,50,.42) 62%)}
+.hero h1 .u{background:linear-gradient(transparent 84%, rgba(244,198,116,.6) 84%);padding-bottom:.02em}
 .hero h1 em{font-style:italic;font-weight:500;color:#FFCE7A}
 .hero .sub{font-size:1.2rem;color:#D3E7E6;margin:24px 0 32px;max-width:33ch;font-weight:400}
 .hero .actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
@@ -264,6 +264,17 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 .sticky .p s{color:var(--muted);font-weight:400;font-size:.82em;margin-right:6px}
 .sticky .btn{padding:13px 22px;font-size:.94rem}
 
+/* ============================================================ DISCOVER (fascinaciones) */
+.discover{background:var(--paper2)}
+.dlist{display:grid;grid-template-columns:1fr 1fr;gap:4px 40px;margin-top:38px}
+.di{display:flex;gap:15px;align-items:flex-start;padding:19px 0;border-top:1px solid var(--line)}
+.di .n{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--sand-2);flex:none;margin-top:.15em;min-width:2.4ch}
+.di p{font-size:1.03rem;color:var(--ink2);line-height:1.5}
+.di p b{color:var(--ink);font-weight:700}
+.di .k{color:var(--teal);font-style:italic}
+/* ============================================================ REVEAL on scroll */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
 /* ============================================================ RESPONSIVE */
 @media (max-width:920px){
   .hero-grid,.problem .inner,.why .grid,.tool{grid-template-columns:1fr;gap:26px}
@@ -323,9 +334,9 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     </nav>
     <div class="hero-grid">
       <div>
-        <span class="eyebrow" style="color:#8FE0DE">Guía + calculadora · edición LATAM</span>
-        <h1>Sabe si tu tanque dará <span class="u">ganancia</span> <em>antes</em> de gastar un peso.</h1>
-        <p class="sub">La guía práctica y la calculadora que te dicen, con tus precios locales, cuánto invertir y en cuántos ciclos recuperas tu dinero.</p>
+        <span class="eyebrow" style="color:#8FE0DE">Para quien quiere vivir de la tilapia, no solo intentarlo</span>
+        <h1>Sabe <span class="u">cuánto vas a ganar</span> con tu tanque… <em>antes</em> de gastar el primer peso.</h1>
+        <p class="sub">La guía y la calculadora que convierten el “creo que da” en “sé exactamente cuánto da” — con los precios reales de tu ciudad.</p>
         <div class="actions">
           <a href="#oferta" class="btn btn-gold">Quiero mi guía hoy
             <svg class="ic arw"><use href="#i-arrow"/></svg></a>
@@ -357,9 +368,9 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 <section class="problem">
   <div class="wrap inner">
     <div>
-      <span class="eyebrow" style="color:#8FE0DE">La verdad incómoda</span>
-      <h2 style="margin-top:12px">Casi nadie fracasa por no saber criar peces. <span class="hl">Fracasa por no hacer los números.</span></h2>
-      <p>Hay cientos de videos que te explican el pH del agua. Ninguno te dice si vas a ganar dinero — ni cuánto necesitas guardado para no quedarte sin alimento a mitad del ciclo. Ahí es donde mueren la mayoría de los proyectos.</p>
+      <span class="eyebrow" style="color:#8FE0DE">La verdad que nadie te dice</span>
+      <h2 style="margin-top:12px">Tu tanque no fracasa por el pez. <span class="hl">Fracasa por una cuenta que nadie hizo a tiempo.</span></h2>
+      <p>Ves videos del pH, de la aireación, de la densidad… y ninguno responde lo único que de verdad importa: <b>¿esto me va a dar dinero, o me va a costar mis ahorros?</b> Para cuando descubres la respuesta, el peso ya está dentro del tanque — y de ahí no vuelve.</p>
     </div>
     <div class="statrow">
       <div class="stat"><span class="n mono">6</span><span class="t">meses <b>solo gastando</b> antes de la primera venta. Ese "valle" quiebra a quien no lo planea.</span></div>
@@ -412,6 +423,25 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ====================================================== DISCOVER (fascinaciones) -->
+<section class="discover sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel"><span class="bar"></span><span class="eyebrow">Lo que vas a descubrir</span></span>
+      <h2>Respuestas que hoy no tienes — y que valen tu inversión entera</h2>
+    </div>
+    <div class="dlist">
+      <div class="di"><span class="n">01</span><p>El <b>error de los 6 meses</b> que vacía la cuenta de 8 de cada 10 principiantes — y por qué casi nadie lo ve venir a tiempo.</p></div>
+      <div class="di"><span class="n">02</span><p>La <b>cifra exacta</b> que decide si ganas o pierdes con cada kilo de pez, y cómo calcularla para tu ciudad en <span class="k">3 minutos</span>.</p></div>
+      <div class="di"><span class="n">03</span><p>Cuánto dinero necesitas <b>REALMENTE</b> tener guardado antes de sembrar el primer alevín. (Pista: no es lo que estás pensando.)</p></div>
+      <div class="di"><span class="n">04</span><p>Cómo cruzar el <b>“valle de la muerte”</b> del cultivo — esos meses en que solo gastas — sin quedarte sin alimento a mitad de camino.</p></div>
+      <div class="di"><span class="n">05</span><p>El precio por kilo que <b>de verdad</b> te deja ganancia — y cómo dejar de regalar tu cosecha al primer intermediario que aparece.</p></div>
+      <div class="di"><span class="n">06</span><p>Tu <b>plan exacto de 30-60-90 días</b>: qué hacer, en qué orden, para no improvisar ni un solo paso.</p></div>
+    </div>
+    <div style="margin-top:34px"><a href="#oferta" class="btn btn-gold">Quiero esas respuestas <svg class="ic arw"><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -562,10 +592,10 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 <!-- ====================================================== FINAL -->
 <section class="final sec">
   <div class="wrap">
-    <span class="eyebrow" style="color:#8FE0DE">Es tu decisión</span>
-    <h2 style="margin-top:12px">Puedes seguir dudando… o decidir con números</h2>
-    <p>En una tarde tendrás más claridad que el 90% de quienes empiezan en la tilapia. El primer paso es abrir la calculadora.</p>
-    <a href="#comprar" class="btn btn-gold">Empezar ahora por $6,90 USD <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+    <span class="eyebrow" style="color:#8FE0DE">Dos caminos</span>
+    <h2 style="margin-top:12px">Puedes sembrar y rezar… o sembrar sabiendo</h2>
+    <p>Hoy, por menos que un almuerzo, cambias la suerte por la certeza. En una tarde vas a saber — con tus propios números — si tu tanque da ganancia. Y si no da, lo sabrás <em>antes</em> de perder un solo peso. Esa tranquilidad no tiene precio; hoy cuesta $6,90.</p>
+    <a href="#comprar" class="btn btn-gold">Quiero decidir con números — $6,90 <svg class="ic arw"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -600,6 +630,17 @@ document.querySelectorAll('a[href="#comprar"]').forEach(a=>{
     if(min)min.textContent=String(m).padStart(2,'0'); if(sec)sec.textContent=String(s).padStart(2,'0');
     if(d<=0)clearInterval(iv); }
   tick(); const iv=setInterval(tick,1000);
+})();
+
+/* Revelación al hacer scroll (se desactiva con prefers-reduced-motion) */
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const els = document.querySelectorAll('.head, .tool, .blist .b, .di, .offerbox, .guarbox, .pc, .stat, .slide, .final .wrap > *');
+  els.forEach(function(el){ el.classList.add('reveal'); });
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin:'0px 0px -8% 0px', threshold:0.08 });
+  els.forEach(function(el){ io.observe(el); });
 })();
 </script>
 </body>
