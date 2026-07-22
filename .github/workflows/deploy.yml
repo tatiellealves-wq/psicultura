@@ -26,7 +26,9 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./producto/site/
-          server-dir: /domains/cultivorentabledetilapia.online/public_html/
+          # La cuenta FTP dedicada inicia sesión DENTRO de public_html del dominio,
+          # por eso el destino es la raíz de esa cuenta ("./").
+          server-dir: ./
           exclude: |
             **/.git*
             **/.git*/**
