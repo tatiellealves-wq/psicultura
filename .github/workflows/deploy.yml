@@ -25,6 +25,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
+          # Tolerar picos de latencia del FTP de Hostinger (evita "Timeout control socket").
+          timeout: 90000
           local-dir: ./producto/site/
           # La cuenta FTP dedicada inicia sesión DENTRO de public_html del dominio,
           # por eso el destino es la raíz de esa cuenta ("./").
