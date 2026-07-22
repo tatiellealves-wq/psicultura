@@ -12,6 +12,12 @@
       "sourceType": "local",
       "computedHash": "253570c46990ea018dd4520dba80cd77c35f9e5a8654057da1812face7be30cd"
     },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/copywriting/SKILL.md",
+      "computedHash": "c8d63b1f77be04fd54981720de65697988810bd28331097dbe0aaf3e166d638a"
+    },
     "dispatching-parallel-agents": {
       "source": "/tmp/claude-0/-home-user-psicultura/64262cca-21a5-5d60-8b02-db183366598e/scratchpad/sp-full/superpowers-main",
       "sourceType": "local",
