@@ -139,6 +139,45 @@ nicho nuevo prueban.
 
 ---
 
+## 3c) BARRIDO DE OTROS NICHOS — dónde SÍ hay dinero (y dónde no)
+
+Medido en la Biblioteca de Anuncios (anuncios ACTIVOS, MX/CO/PE/EC/AR/CL, julio 2026):
+
+| Nicho | Anuncios activos | ¿Escalado? | Ángulo dominante | ¿Modelo digital para ti? |
+|---|---|---|---|---|
+| **Amarres de amor / esotérico** | **14.644** | 🔥🔥🔥 brutal | Dolor emocional + WhatsApp | ❌ No es tu tipo de producto |
+| **Crochet / tejido / manualidades** | **906** | 🔥🔥 enorme | *"De pasión a marca propia"*, *"Vende por encargo"* | ✅✅ **Sí — mismo modelo (PDF/patrones), misma psicología** |
+| **Adelgazar / salud (IEvolution etc.)** | **130+** | 🔥🔥 fuerte | Miedo/culpa/reencuadre | ⚠️ Suele ser suplemento físico |
+| **Repostería / postres para vender** | **102** | 🔥 sólido | *"Convierte tu cocina en repostería rentable"* | ✅✅ **Sí — idéntico a lo tuyo** |
+| **Gallinas ponedoras** | ~40 (varios dueños) | 🔥 sólido | *"De hobby a negocio rentable"* | ✅ Sí — tu vecino directo |
+| **Tilapia** | ~20 | medio (poco info-producto) | "aprende a criar" | ✅ **Tu nicho — hueco real** |
+| Diabetes / azúcar | 11 | ❌ débil (casi todo suplemento) | — | ❌ |
+| Adiestramiento canino | 6 | ❌ débil | — | ❌ (raro, suele escalar más) |
+
+### 🧠 EL DESCUBRIMIENTO CENTRAL (vale más que todo lo demás)
+
+**El MISMO gancho gana en TODOS los nichos que escalan:** convertir **algo que ya tienes**
+(un talento, un patio, una cocina, un terreno) en **una fuente de ingreso**. No venden el
+"cómo" (tejer, hornear, criar) — venden la **transformación a "negocio/rentable"**.
+
+- Crochet: *"De pasión a marca propia"* / *"Vende por encargo"*
+- Repostería: *"Convierte tu cocina en una mini repostería rentable"* / *"tu talento en un negocio dulce"*
+- Gallinas: *"De hobby a emprendimiento exitoso"*
+- Tilapia (tú): *"Ese patio o terreno parado puede ser tu segunda fuente de ingreso"* ✅ ya lo tienes
+
+**Precios que se ven en los creativos** (confirman impulso ultra-bajo): *"10 soles"* (~$2.7),
+*"$50 MXN"* (~$3), *"50% de descuento"*, *"Solo por hoy"*. → Tu **$6,90 está en la banda alta**;
+funciona, pero si un mercado no convierte, **probar $3–$4 de entrada + upsell** es lo que hacen
+los escalados.
+
+### 💡 Idea de expansión (multi-oferta, como "Aprende con Nosotros")
+Crochet y repostería están **mucho más escalados que tilapia** y son el mismo tipo de producto
+digital barato. Cuando "Cultivo Rentable de Tilapia" funcione, el siguiente producto natural del
+mismo dueño (tú) es un **PDF de otro nicho "hobby→ingreso"**. Un operador digital LATAM no vive
+de un producto: vive de **una fábrica de PDFs baratos** con el mismo funnel.
+
+---
+
 ## 4) El PLAYBOOK que se repite (lo que hay que copiar)
 
 Destilado de todo lo que está corriendo con dinero:
