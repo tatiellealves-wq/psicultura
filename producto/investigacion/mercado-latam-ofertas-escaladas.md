@@ -96,6 +96,49 @@ psicología — úsalos como expansión futura o para robar ángulos):
 
 ---
 
+## 3b) MAPA DE "DUEÑOS ESCALADOS" (ranking por nº de anuncios ACTIVOS hoy)
+
+Cuantos más anuncios activos sostiene una página, más presupuesto está gastando = más está
+ganando. Este es el ranking real medido en la Biblioteca de Anuncios de Meta (julio 2026).
+
+> ⚠️ Límite técnico: la Biblioteca da **nombre de página + nº de anuncios activos + título del
+> enlace**, pero el **texto completo del creativo está tras login** (403). Para leer cada pieza,
+> abre los `ad_snapshot_url` estando logueado en Facebook.
+
+| # | Dueño / página | Nichos | Anuncios activos | Funnel | ¿Modelo para ti? |
+|---|---|---|---|---|---|
+| 1 | **IEvolution** | Salud (detox hígado) | **54** | Checkout (suplemento físico, Amazon/MercadoLibre) | ❌ Es producto FÍSICO, no digital. **Copia su ESTRUCTURA de 6 ángulos, no el negocio** |
+| 2 | **Aprende con Nosotros** (🇨🇴) | Agro/educación multi-producto | **25** | Disparo masivo mismo día (deja que Meta elija ganador) | ✅ **Sí** — operador digital multi-nicho, tu mismo modelo |
+| 3 | **RM Agroinversiones** (🇨🇴) | Gallinas ponedoras | **16** | Messenger/WhatsApp ("Chatea con nosotros") | ✅ Sí — digital agro, funnel chat |
+| 4 | **Pro Pack** (🇵🇪) | Ponedoras | **8** | Landing ("Más Información") | ✅ Sí |
+| 5 | **Zootecnia y Veterinaria Emprendedor** (🇲🇽) | Tilapia + ponedoras (multi) | **7** | (enlace vacío / catálogo) | ✅ Sí — multi-nicho como tú |
+| — | Visión Pecuaria (🇲🇽), HIJOS DEL CAMPO (🇲🇽) | Tilapia | 3 / 1 | Landing | ✅ Competidores directos |
+
+**Dato clave sobre IEvolution (el más escalado):** corre **UN solo producto** con **54 anuncios**
+girando **6 ángulos distintos a la vez**, cada uno para una emoción diferente. Ese es el manual
+de escala de verdad — no 1 anuncio, sino un **sistema de 6 ganchos simultáneos**:
+1. `No Es Tu Culpa — Es Tu Hígado 💛` → reencuadre de culpa
+2. `+50 Cálculos Del Hígado 😱` → shock/curiosidad
+3. `Las Recetas Caseras Pueden Ser Peligrosas ⚠️` → ataca la alternativa (autoridad)
+4. `30 Libras Perdidas en 60 Días 🔥` → prueba/resultado
+5. `No Esperes a Que Te Operen 🚨` → miedo/urgencia
+6. `Ese Estomaguito NO Es Grasa — Es Tu Hígado 😳` → reencuadre del síntoma
+
+**Aplícalo a tilapia — corre estos 6 ángulos en paralelo (no uno solo):**
+1. Culpa → *"No fracasas por no saber criar peces — fracasas por una cuenta que nadie hizo"*
+2. Shock/curiosidad → *"Hay una cifra que decide si ganas o pierdes con cada kilo de tilapia"*
+3. Ataca la alternativa → *"Los videos de YouTube no te dicen lo único que importa: si te conviene"*
+4. Prueba → *(tu caso real del lanzamiento)*
+5. Miedo/urgencia → *"No siembres ni un alevín antes de ver esto"*
+6. Sueño/reencuadre → *"Ese patio o terreno parado puede ser tu segunda fuente de ingreso"*
+
+**Nota sobre "más ofertas del mismo dueño":** IEvolution = 1 producto (no tiene un catálogo que
+modelar). El dueño realmente multi-oferta es **"Aprende con Nosotros"** (🇨🇴): lanza decenas de
+creativos digitales de golpe. Es la mejor página para **espiar de forma recurrente** y ver qué
+nicho nuevo prueban.
+
+---
+
 ## 4) El PLAYBOOK que se repite (lo que hay que copiar)
 
 Destilado de todo lo que está corriendo con dinero:
