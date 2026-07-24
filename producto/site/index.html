@@ -680,7 +680,9 @@ function checkoutConParams(){
   if(!qs) return CHECKOUT_URL;
   return CHECKOUT_URL + (CHECKOUT_URL.indexOf('?') >= 0 ? '&' : '?') + qs;
 }
-document.querySelectorAll('a[href="#comprar"]').forEach(a=>{
+// Todos los botones (.btn) que apuntan a una sección interna (#oferta, #comprar,
+// #recibir, etc.) van DIRECTO al checkout — ningún botón que lleve a otro botón.
+document.querySelectorAll('a.btn[href^="#"]').forEach(a=>{
   if(CHECKOUT_URL!=="#"){ a.setAttribute('href', checkoutConParams()); a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); }
 });
 (function(){
