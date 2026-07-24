@@ -210,6 +210,41 @@ a,button,summary{touch-action:manipulation}
 .pay{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:20px;font-size:.82rem;color:var(--ink2)}
 .pay span{display:flex;align-items:center;gap:7px}.pay .ic{width:1.05em;height:1.05em;color:var(--teal)}
 
+/* ============================================================ DOS PLANES */
+.plans{display:grid;grid-template-columns:1fr 1.14fr;gap:22px;align-items:start;max-width:960px;margin:0 auto}
+.plan{background:linear-gradient(180deg,#fff,#FCFAF4);border-radius:var(--rad);box-shadow:var(--sh);
+  padding:30px 30px 32px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.plan .pname{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--teal);font-weight:700}
+.plan h3{font-family:var(--disp);font-weight:900;font-size:1.55rem;color:var(--ink);margin:8px 0 4px;letter-spacing:-.015em}
+.plan .ptag{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+.plan .plist{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0 0 20px;flex:1}
+.plan .plist li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:var(--ink2);line-height:1.45}
+.plan .plist .ic{width:1.15em;height:1.15em;color:var(--teal);margin-top:.22em;stroke-width:2.4}
+.plan .plist li.off{color:#9AA8A9}
+.plan .plist li.off .ic{color:#C6CFCF}
+.plan .pprice{display:flex;align-items:baseline;gap:11px;margin-bottom:4px}
+.plan .pprice .old{font-family:var(--mono);font-size:1.05rem;color:var(--muted);text-decoration:line-through}
+.plan .pprice .now{font-family:var(--disp);font-weight:900;font-size:2.9rem;color:var(--ink);line-height:1}
+.plan .pprice .now sup{font-size:.95rem;font-weight:700;vertical-align:top;margin-right:2px;color:var(--sand-2)}
+.plan .pnote2{font-size:.82rem;color:var(--muted);margin-bottom:18px}
+.plan .btn{width:100%;justify-content:center;font-size:1.05rem;padding:17px 24px}
+.plan .btn-line{border-color:var(--line2);color:var(--ink)}
+.plan .btn-line:hover{border-color:var(--teal);background:#fff}
+
+.plan.best{border:2px solid var(--sand);padding-top:44px;
+  box-shadow:0 30px 70px -30px rgba(5,49,58,.6),0 0 0 6px rgba(228,160,50,.12)}
+.plan.best .flag{position:absolute;top:0;left:0;right:0;background:var(--sand);color:var(--sand-ink);
+  font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  text-align:center;padding:8px 10px}
+.plan.best h3{color:var(--abyss)}
+.plan .save{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:700;color:#2F6B32;background:#E4F3E2;padding:5px 10px;
+  border-radius:999px;margin-bottom:12px}
+.plan .combo{border-radius:12px;overflow:hidden;margin-bottom:16px;background:#F6F1E4}
+.plan .combo img{width:100%;display:block}
+.plans-note{text-align:center;color:#B7D4D3;font-size:.9rem;margin-top:22px}
+
 /* ============================================================ CAROUSEL */
 .peek .track{display:flex;gap:20px;overflow-x:auto;padding:16px 24px 30px;scroll-snap-type:x mandatory;
   scrollbar-width:thin;scrollbar-color:var(--teal) transparent}
@@ -312,6 +347,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   .guarbox{grid-template-columns:1fr;text-align:center;padding:34px 24px}.seal{margin:0 auto}
   .sec,.problem{padding:60px 0}
   .flags{display:none}
+  .plans{grid-template-columns:1fr;gap:18px;max-width:520px}
+  .plan.best{order:-1}
 }
 @media (max-width:600px){
   .sticky{display:flex}body{padding-bottom:74px}
@@ -319,6 +356,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   .topbar .btn{display:none}
   .chip.c1{right:2%}.chip.c2{right:0}
   .price .now{font-size:2.9rem}.timer .cell{min-width:56px}
+  .plan{padding:26px 22px 28px}.plan.best{padding-top:42px}
+  .plan .pprice .now{font-size:2.5rem}
   .offerbox .top,.offerbox .stack,.priceblock{padding-left:22px;padding-right:22px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -346,6 +385,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M6 8l-3 6h6l-3-6Zm12 0-3 6h6l-3-6ZM6 8l6-2 6 2"/></symbol>
   <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4c3-2 6 2 9 0s5-1 5-1v9s-2 1-5 1-6-2-9 0"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
 </svg>
 
 <!-- ====================================================== HERO -->
@@ -367,7 +407,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <div class="actions">
           <a href="#oferta" class="btn btn-gold">Quiero mi guía hoy
             <svg class="ic arw"><use href="#i-arrow"/></svg></a>
-          <a href="#recibir" class="btn btn-line">Ver la oferta</a>
+          <a href="#oferta" class="btn btn-line">Ver los planes</a>
         </div>
         <div class="reassure"><svg class="ic"><use href="#i-shield"/></svg>
           Pago único · Acceso inmediato · Garantía de 7 días</div>
@@ -536,39 +576,61 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <div class="head center" style="margin-bottom:30px">
       <span class="eyebrow" style="color:#F4C674">Oferta de lanzamiento</span>
-      <h2 style="color:#fff">Todo esto, por menos que una tilapia en el mercado</h2>
+      <h2 style="color:#fff">Elige cómo quieres empezar</h2>
+      <div class="timer" style="max-width:340px;margin:20px auto 0">
+        <span class="lbl">Precio de lanzamiento — termina en</span>
+        <div class="cells" id="timer" aria-hidden="true">
+          <div class="cell"><b id="t-min">15</b><span>min</span></div>
+          <div class="cell"><b id="t-sec">00</b><span>seg</span></div>
+        </div>
+      </div>
     </div>
-    <div class="offerbox">
-      <div class="top"><h2>Lo que te llevas hoy</h2></div>
-      <div class="stack">
-        <div class="srow"><span class="ico"><svg class="ic"><use href="#i-doc"/></svg></span>
-          <span class="txt"><b>Guía Tilapia Rentable (PDF)</b><span>12 páginas, directo al grano</span></span><span class="val">$19</span></div>
-        <div class="srow"><span class="ico"><svg class="ic"><use href="#i-grid"/></svg></span>
-          <span class="txt"><b>Calculadora de ROI editable</b><span>tus números, resultado al instante</span></span><span class="val">$19</span></div>
-        <div class="srow"><span class="ico"><svg class="ic"><use href="#i-map"/></svg></span>
-          <span class="txt"><b>Plan de acción 30-60-90 días</b><span>checklist imprimible</span></span><span class="val">$9</span></div>
-        <div class="srow"><span class="ico"><svg class="ic"><use href="#i-coins"/></svg></span>
-          <span class="txt"><b>Guía de costos por país</b><span>dónde se esconden los gastos</span></span><span class="val">$9</span></div>
-        <div class="totrow"><span class="lbl">Valor total</span><span class="amt mono">$56</span></div>
-      </div>
-      <div class="priceblock">
-        <div class="timer">
-          <span class="lbl">Precio de lanzamiento — termina en</span>
-          <div class="cells" id="timer" aria-hidden="true">
-            <div class="cell"><b id="t-min">15</b><span>min</span></div>
-            <div class="cell"><b id="t-sec">00</b><span>seg</span></div>
-          </div>
-        </div>
-        <div class="price"><span class="old mono">$19</span>
+
+    <div class="plans">
+      <!-- ---------- PLAN ESENCIAL ---------- -->
+      <div class="plan">
+        <span class="pname">Plan Esencial</span>
+        <h3>Los números claros</h3>
+        <p class="ptag">Para saber si tu tanque da ganancia — antes de invertir.</p>
+        <ul class="plist">
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Guía Tilapia Rentable</b> — inversión, costos y cómo vender</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Calculadora de ROI</b> editable, con los precios de tu ciudad</span></li>
+          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Plan de alimentación semana a semana</span></li>
+          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Proyección de ganancias a 12 meses</span></li>
+          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Manual de montaje y primeros 30 días</span></li>
+        </ul>
+        <div class="pprice"><span class="old mono">$19</span>
           <span class="now"><sup>USD</sup><span class="mono">6,90</span></span></div>
-        <p class="pnote">Pago único. Sin suscripciones. Acceso de por vida a las actualizaciones.</p>
-        <a href="#comprar" class="btn btn-gold">Comprar y recibir ahora <svg class="ic arw"><use href="#i-arrow"/></svg></a>
-        <div class="pay">
-          <span><svg class="ic"><use href="#i-lock"/></svg> Pago seguro</span>
-          <span><svg class="ic"><use href="#i-card"/></svg> Tarjeta · PayPal · Pago local</span>
-          <span><svg class="ic"><use href="#i-bolt"/></svg> Entrega inmediata</span>
-        </div>
+        <p class="pnote2">Pago único · entrega inmediata</p>
+        <a href="#comprar" class="btn btn-line">Quiero el Esencial</a>
       </div>
+
+      <!-- ---------- PLAN COMPLETO ---------- -->
+      <div class="plan best">
+        <span class="flag">⭐ El más elegido · Ahorras $47</span>
+        <span class="pname">Plan Completo</span>
+        <h3>El cultivo entero</h3>
+        <p class="ptag">Cómo montarlo <em>y</em> cuánto rinde. Los 4 materiales juntos.</p>
+        <div class="combo"><img src="img/combo-completo.jpg" width="900" height="900" loading="lazy" alt="Los 4 materiales del Plan Completo"></div>
+        <ul class="plist">
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Todo lo del Plan Esencial</b> (guía + calculadora)</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Acelerador Tilapia</b> — plan de alimentación semana a semana</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Proyección a 12 meses</b> en planilla editable</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Cultivo de Tilapia Desde Cero</b> — montaje, agua, alevines y tus primeros 30 días</span></li>
+        </ul>
+        <span class="save">Valor total $62 — hoy pagas $14,90</span>
+        <div class="pprice"><span class="old mono">$62</span>
+          <span class="now"><sup>USD</sup><span class="mono">14,90</span></span></div>
+        <p class="pnote2">Pago único · entrega inmediata · acceso de por vida</p>
+        <a href="#completo" class="btn btn-gold">Quiero el Plan Completo <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <div class="pay" style="color:#B7D4D3;margin-top:26px">
+      <span><svg class="ic"><use href="#i-lock"/></svg> Pago seguro</span>
+      <span><svg class="ic"><use href="#i-card"/></svg> Tarjeta · PayPal · Pago local</span>
+      <span><svg class="ic"><use href="#i-bolt"/></svg> Entrega inmediata</span>
+      <span><svg class="ic"><use href="#i-shield"/></svg> Garantía de 7 días</span>
     </div>
   </div>
 </section>
@@ -656,8 +718,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <span class="eyebrow" style="color:#8FE0DE">Dos caminos</span>
     <h2 style="margin-top:12px">Puedes sembrar y rezar… o sembrar sabiendo</h2>
-    <p>Hoy, por menos que un almuerzo, cambias la suerte por la certeza. En una tarde vas a saber — con tus propios números — si tu tanque da ganancia. Y si no da, lo sabrás <em>antes</em> de perder tu dinero. Esa tranquilidad no tiene precio; hoy cuesta $6,90.</p>
-    <a href="#comprar" class="btn btn-gold">Quiero decidir con números — $6,90 <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+    <p>Hoy, por menos que un almuerzo, cambias la suerte por la certeza. En una tarde vas a saber — con tus propios números — si tu tanque da ganancia. Y si no da, lo sabrás <em>antes</em> de perder tu dinero. Esa tranquilidad no tiene precio; hoy empieza en $6,90.</p>
+    <a href="#oferta" class="btn btn-gold">Ver los dos planes <svg class="ic arw"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -673,24 +735,35 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 
 <!-- ====================================================== STICKY -->
 <div class="sticky">
-  <div class="p"><s>$19</s> $6,90 USD</div>
-  <a href="#oferta" class="btn btn-gold">Quiero mi guía <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+  <div class="p">desde <s>$19</s> $6,90 USD</div>
+  <a href="#oferta" class="btn btn-gold">Ver los planes <svg class="ic arw"><use href="#i-arrow"/></svg></a>
 </div>
 
 <script>
-const CHECKOUT_URL = "https://pay.hotmart.com/N106802906U?checkoutMode=10";
-// Reenvía los parámetros de la URL (utm_source, utm_campaign, fbclid, etc.) al checkout
-// para que UTMify pueda atribuir de dónde viene cada venta.
-function checkoutConParams(){
+/* ---------- CHECKOUTS ----------
+   Dos ofertas: Esencial ($6,90) y Completo ($14,90).
+   Los botones de cada plan van DIRECTO a su checkout.
+   Los CTA generales de la página llevan a la sección de planes para que
+   el visitante elija — así el Plan Completo nunca queda escondido.        */
+const CHECKOUT_ESENCIAL = "https://pay.hotmart.com/N106802906U?checkoutMode=10";
+const CHECKOUT_COMPLETO = "https://pay.hotmart.com/W106875284O?checkoutMode=10";
+
+// Reenvía los parámetros de la URL (utm_source, utm_campaign, fbclid, etc.) al
+// checkout para que UTMify pueda atribuir de dónde viene cada venta.
+function conParams(url){
   var qs = window.location.search.replace(/^\?/, '');
-  if(!qs) return CHECKOUT_URL;
-  return CHECKOUT_URL + (CHECKOUT_URL.indexOf('?') >= 0 ? '&' : '?') + qs;
+  if(!qs) return url;
+  return url + (url.indexOf('?') >= 0 ? '&' : '?') + qs;
 }
-// Todos los botones (.btn) que apuntan a una sección interna (#oferta, #comprar,
-// #recibir, etc.) van DIRECTO al checkout — ningún botón que lleve a otro botón.
-document.querySelectorAll('a.btn[href^="#"]').forEach(a=>{
-  if(CHECKOUT_URL!=="#"){ a.setAttribute('href', checkoutConParams()); a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); }
-});
+function enlazarCheckout(selector, url){
+  document.querySelectorAll(selector).forEach(function(a){
+    a.setAttribute('href', conParams(url));
+    a.setAttribute('target','_blank');
+    a.setAttribute('rel','noopener');
+  });
+}
+enlazarCheckout('a[href="#comprar"]',  CHECKOUT_ESENCIAL);
+enlazarCheckout('a[href="#completo"]', CHECKOUT_COMPLETO);
 (function(){
   const KEY='tilapia_offer_deadline';
   let dl = localStorage.getItem(KEY); const now = Date.now();
