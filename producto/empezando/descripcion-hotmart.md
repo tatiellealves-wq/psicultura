@@ -2,15 +2,18 @@
 
 Idioma: Español neutro · Complemento práctico de "Cultivo Rentable de Tilapia"
 Cumplimiento: vende MÉTODO y claridad — nunca "ganancia garantizada". Lleva disclaimer educativo.
-Imagen de portada: `hotmart-cover-600.jpg` (600×600)
+Imagen de portada: `hotmart-cover.jpg` (600×600) · alternativa: `hotmart-cover-alt.jpg`
+
+> Nota: el nombre comercial (portada y ficha de Hotmart) es **Cultivo de Tilapia Desde Cero**.
+> El PDF entregado conserva su título interno "Empezando desde Cero".
 
 ---
 
 ## Nombre del producto
-Empezando desde Cero — Manual de arranque para tu primer tanque de tilapia
+Cultivo de Tilapia Desde Cero — Guía completa para tu primer tanque
 
 ## Descripción corta (subtítulo)
-El paso a paso físico que nadie te explica: el agua, el tanque, los alevines y tus primeros 30 días. Léelo antes de comprar tu primer alevín.
+Aprende paso a paso cómo montar tu primer tanque rentable, evitar errores y comenzar correctamente.
 
 ---
 
