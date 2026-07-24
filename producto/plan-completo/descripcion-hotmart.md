@@ -1,6 +1,6 @@
 # Descripción del producto — Plan Completo (cadastro Hotmart)
 
-Idioma: Español neutro · Bundle de los 4 productos · Precio: $29,90 USD
+Idioma: Español neutro · Bundle de los 4 productos · Precio: $14,90 USD
 Cumplimiento: vende MÉTODO, claridad y ahorro de errores — nunca "ganancia garantizada".
 Imagen de portada: usar `producto/mockups/combo-completo.jpg` redimensionado a 600×600
 
@@ -56,7 +56,30 @@ Deja de improvisar. Empieza sabiendo qué haces — y cuánto da.
 |---|---|
 | Guía Tilapia Rentable | $19 |
 | Calculadora de ROI | $19 |
-| Acelerador Tilapia | $24 |
-| Cultivo de Tilapia Desde Cero | $23 |
-| **Valor total** | **$85** |
-| **Hoy** | **$29,90** |
+| Acelerador Tilapia | $12 |
+| Cultivo de Tilapia Desde Cero | $12 |
+| **Valor total** | **$62** |
+| **Hoy** | **$14,90** |
+
+> Los valores del stack están alineados con el precio real de cada pieza suelta
+> (el Acelerador se vende a $12 como order bump). Así el cliente no encuentra
+> contradicciones si compara.
+
+---
+
+## ⚠️ Conflicto de precios a resolver
+
+Con el Completo a **$14,90**, el order bump deja de tener sentido:
+
+- Esencial $6,90 **+** bump Acelerador $12 = **$18,90**
+- Plan Completo (4 productos) = **$14,90**
+
+El que acepta el bump paga **más por menos**. Hay que ajustar una de las dos cosas:
+
+**Opción A (recomendada):** bajar el order bump del Acelerador a **$7**.
+→ Esencial + bump = $13,90 · Completo = $14,90. La escalera queda coherente
+y el Completo sigue siendo la mejor oferta.
+
+**Opción B:** quitar el order bump y dejar solo los dos planes en la página.
+
+**Opción C:** subir el Completo a ~$19,90 y mantener el bump en $12.
