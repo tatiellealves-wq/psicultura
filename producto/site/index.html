@@ -674,8 +674,15 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 
 <script>
 const CHECKOUT_URL = "https://pay.hotmart.com/N106802906U?checkoutMode=10";
+// Reenvía los parámetros de la URL (utm_source, utm_campaign, fbclid, etc.) al checkout
+// para que UTMify pueda atribuir de dónde viene cada venta.
+function checkoutConParams(){
+  var qs = window.location.search.replace(/^\?/, '');
+  if(!qs) return CHECKOUT_URL;
+  return CHECKOUT_URL + (CHECKOUT_URL.indexOf('?') >= 0 ? '&' : '?') + qs;
+}
 document.querySelectorAll('a[href="#comprar"]').forEach(a=>{
-  if(CHECKOUT_URL!=="#"){ a.setAttribute('href', CHECKOUT_URL); a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); }
+  if(CHECKOUT_URL!=="#"){ a.setAttribute('href', checkoutConParams()); a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); }
 });
 (function(){
   const KEY='tilapia_offer_deadline';

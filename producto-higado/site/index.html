@@ -309,7 +309,13 @@ footer .disc{max-width:700px;margin:0 auto 12px;color:#9CC0AA;line-height:1.6}
 
 <script>
   var CHECKOUT_URL = "https://pay.hotmart.com/N106864119G?checkoutMode=10";
-  function goCheckout(e){ if(CHECKOUT_URL.indexOf('http')===0){ e.preventDefault(); window.open(CHECKOUT_URL,'_blank'); } }
+  // Reenvía los parámetros de la URL (utm_source, utm_campaign, fbclid, etc.) al checkout
+  // para que UTMify pueda atribuir de dónde viene cada venta.
+  function checkoutURL(){
+    var qs = window.location.search.replace(/^\?/, '');
+    return qs ? CHECKOUT_URL + (CHECKOUT_URL.indexOf('?')>=0?'&':'?') + qs : CHECKOUT_URL;
+  }
+  function goCheckout(e){ if(CHECKOUT_URL.indexOf('http')===0){ e.preventDefault(); window.open(checkoutURL(),'_blank'); } }
   // Todos los botones van directo al checkout
   document.querySelectorAll('.btn').forEach(function(el){ el.addEventListener('click',goCheckout); });
 
