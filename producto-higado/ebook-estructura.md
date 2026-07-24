@@ -76,15 +76,15 @@ real** — el "cómo" que la cápsula no te da. Barato, inmediato, sin logístic
 
 ---
 
-## 4) Bônus (aumentan valor percibido sin costo)
+## 4) Bônus — pequeños PDFs entregados como "ebooks bonus" (sin web app)
 
-1. **🧩 Web app — Planificador de 21 días** *(diferencial vs. la competencia de cápsulas)*:
-   marca comida/agua/sueño cada día, barra de progreso. (HTML, mismo estilo que el sitio de
-   tilapia.)
-2. **🧪 Quiz "¿Tu hígado pide un reset?"** (8 señales de estilo de vida → score → recomendación).
-   Sirve doble: bônus Y **carnada del anuncio**.
-3. **🛒 Lista imprimible "20 alimentos que recargan tu hígado (y sus reemplazos)".**
-4. **🥤 Mini-guía "7 licuados de mañana para desinflamar".**
+> Decisión: **sin web app.** Los bônus son PDFs cortos (2–6 págs c/u), con el mismo diseño
+> premium del ebook principal, para que el paquete se sienta caro. Algunos los hará el usuario.
+
+1. **🥤 "7 Licuados de la Mañana para Desinflamar"** (PDF, ~4 págs).
+2. **🛒 "20 Alimentos que Recargan tu Hígado (y sus reemplazos)"** (PDF imprimible, 1–2 págs).
+3. **📋 "Guía Exprés: Qué pedir cuando comes fuera de casa"** (PDF, ~3 págs).
+4. **🗓️ "Planificador de 21 Días para imprimir"** (PDF con casillas — reemplaza al web app).
 
 ---
 
@@ -99,8 +99,8 @@ real** — el "cómo" que la cápsula no te da. Barato, inmediato, sin logístic
 
 ## 6) Funnel (reutiliza toda tu infraestructura)
 
-Anuncio (quiz/carnada) → landing (clon del sitio de tilapia, otro tema) → Hotmart (nuevo
-producto) → entrega automática del PDF + acceso a la web app. Pixel/UTMify igual.
+Anuncio → landing (clon del sitio de tilapia, otro tema) → Hotmart (nuevo producto) → entrega
+automática del PDF principal + los PDFs bônus. Pixel/UTMify igual.
 **Dominio propio nuevo** (ej. `higadoligero.online` o similar).
 
 ---

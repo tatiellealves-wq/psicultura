@@ -1,0 +1,149 @@
+@import url('fonts.css');
+
+:root{
+  --forest:#173B2E;      /* verde profundo */
+  --emerald:#2D6A4F;
+  --sage:#6B9080;
+  --mist:#CBE0D4;
+  --cream:#FBF7EE;       /* papel */
+  --cream-2:#F3ECDD;
+  --ink:#22312B;         /* texto */
+  --ink-soft:#4A5B52;
+  --gold:#BE9A45;
+  --gold-soft:#E8D9AE;
+  --coral:#C25A45;       /* alerta médico */
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'Hanken Grotesk',sans-serif;color:var(--ink);background:var(--cream);
+  font-size:11.2pt;line-height:1.62;font-weight:400;-webkit-font-smoothing:antialiased}
+
+/* ---------- página ---------- */
+@page{size:148mm 210mm;margin:0}   /* A5 */
+.page{width:148mm;height:210mm;position:relative;overflow:hidden;
+  break-after:page;background:var(--cream)}
+.page:last-child{break-after:auto}
+.pad{padding:20mm 17mm 22mm}
+
+/* rodapé impresso */
+.foot{position:absolute;left:17mm;right:17mm;bottom:11mm;display:flex;
+  justify-content:space-between;align-items:center;
+  font-family:'Space Mono',monospace;font-size:7pt;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sage)}
+.foot .n{color:var(--emerald);font-weight:700}
+
+/* ---------- tipografia ---------- */
+.kicker{font-family:'Space Mono',monospace;font-size:8pt;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+h1,h2,h3{font-family:'Fraunces',serif;color:var(--forest);line-height:1.08;
+  font-weight:900;letter-spacing:-.01em}
+h1{font-size:30pt}
+h2{font-size:20pt;margin-bottom:8px}
+h3{font-size:13.5pt;font-weight:600;color:var(--emerald);margin:14px 0 5px}
+p{margin-bottom:9px}
+em{font-style:italic}
+strong{font-weight:700;color:var(--forest)}
+.lead{font-size:12.5pt;line-height:1.6;color:var(--ink-soft)}
+.serif-it{font-family:'Fraunces',serif;font-style:italic;font-weight:400}
+
+/* capitular */
+.dropcap::first-letter{font-family:'Fraunces',serif;font-weight:900;color:var(--gold);
+  float:left;font-size:52pt;line-height:.82;padding:6px 10px 0 0}
+
+ul.clean{list-style:none;margin:8px 0 10px}
+ul.clean li{position:relative;padding-left:20px;margin-bottom:6px}
+ul.clean li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;
+  border-radius:50%;background:var(--gold)}
+ul.check li::before{content:"✓";background:none;color:var(--emerald);font-weight:800;
+  top:0;left:0;font-size:11pt}
+
+/* ---------- callouts ---------- */
+.box{border-radius:12px;padding:14px 16px;margin:14px 0;font-size:10.3pt;line-height:1.5}
+.box .bt{font-family:'Space Mono',monospace;font-size:7.5pt;letter-spacing:.2em;
+  text-transform:uppercase;font-weight:700;display:block;margin-bottom:5px}
+.box.tip{background:linear-gradient(180deg,#EAF3EC,#E1EEE4);border:1px solid var(--mist)}
+.box.tip .bt{color:var(--emerald)}
+.box.dato{background:var(--cream-2);border:1px solid var(--gold-soft)}
+.box.dato .bt{color:var(--gold)}
+.box.med{background:#FBECE8;border:1px solid #F0C9BF}
+.box.med .bt{color:var(--coral)}
+
+/* ---------- capa ---------- */
+.cover{background:radial-gradient(120% 90% at 78% 12%,#2D6A4F 0%,#173B2E 55%,#0F2A20 100%);
+  color:#fff;display:flex;flex-direction:column;justify-content:space-between;
+  padding:22mm 17mm}
+.cover .brand{font-family:'Space Mono',monospace;font-size:8pt;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold-soft)}
+.cover h1{color:#fff;font-size:44pt;line-height:.98}
+.cover h1 em{color:var(--gold-soft);font-weight:400}
+.cover .sub{font-size:12.5pt;color:#D7E6DB;max-width:30ch;margin-top:16px;line-height:1.5}
+.cover .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.pill{font-family:'Space Mono',monospace;font-size:7.5pt;letter-spacing:.12em;
+  text-transform:uppercase;border:1px solid rgba(232,217,174,.5);color:var(--gold-soft);
+  padding:6px 12px;border-radius:999px}
+.cover .foot-c{font-family:'Space Mono',monospace;font-size:7.5pt;letter-spacing:.2em;
+  text-transform:uppercase;color:#9CC0AA}
+
+/* ---------- divisores de parte ---------- */
+.divider{background:linear-gradient(160deg,#173B2E,#0F2A20);color:#fff;
+  display:flex;flex-direction:column;justify-content:center;padding:20mm 17mm}
+.divider .pnum{font-family:'Fraunces',serif;font-size:64pt;font-weight:900;
+  color:rgba(190,154,69,.28);line-height:1}
+.divider h2{color:#fff;font-size:26pt;margin-top:4px}
+.divider .pdesc{color:#CFE2D6;font-size:11.5pt;margin-top:12px;max-width:34ch}
+.divider .rule{width:44px;height:3px;background:var(--gold);margin:18px 0}
+
+/* ---------- índice ---------- */
+.toc-row{display:flex;align-items:baseline;gap:10px;margin-bottom:11px}
+.toc-row .t{font-family:'Fraunces',serif;font-weight:600;font-size:12pt;color:var(--forest)}
+.toc-row .dots{flex:1;border-bottom:1px dotted var(--sage);transform:translateY(-3px)}
+.toc-row .pg{font-family:'Space Mono',monospace;font-size:9pt;color:var(--emerald)}
+.toc-sec{font-family:'Space Mono',monospace;font-size:8pt;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin:16px 0 8px;font-weight:700}
+
+/* ---------- tablas ---------- */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:9.4pt}
+.menu th{background:var(--forest);color:#fff;font-family:'Space Mono',monospace;
+  font-size:7.4pt;letter-spacing:.08em;text-transform:uppercase;padding:7px 8px;text-align:left}
+.menu td{padding:7px 8px;border-bottom:1px solid var(--mist);vertical-align:top}
+.menu td.day{font-family:'Fraunces',serif;font-weight:700;color:var(--emerald);white-space:nowrap}
+.menu tr:nth-child(even) td{background:rgba(203,224,212,.16)}
+
+.sme{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:12px 0}
+.sme .col{border-radius:10px;padding:12px;font-size:9.3pt}
+.sme .si{background:#E7F1E9;border:1px solid var(--mist)}
+.sme .mod{background:var(--cream-2);border:1px solid var(--gold-soft)}
+.sme .no{background:#FBECE8;border:1px solid #F0C9BF}
+.sme h4{font-family:'Space Mono',monospace;font-size:8pt;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:7px}
+.sme .si h4{color:var(--emerald)} .sme .mod h4{color:var(--gold)} .sme .no h4{color:var(--coral)}
+.sme ul{list-style:none} .sme li{padding:2px 0;border-bottom:1px dotted rgba(0,0,0,.08)}
+
+/* ---------- receitas ---------- */
+.recipe{border:1px solid var(--mist);border-radius:14px;overflow:hidden;margin:12px 0;
+  background:#fff}
+.recipe .rhead{background:linear-gradient(120deg,#2D6A4F,#173B2E);color:#fff;padding:12px 15px}
+.recipe .rhead .rk{font-family:'Space Mono',monospace;font-size:7pt;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold-soft)}
+.recipe .rhead h3{color:#fff;font-family:'Fraunces',serif;font-weight:900;font-size:14pt;margin:2px 0 0}
+.recipe .rmeta{display:flex;gap:14px;margin-top:6px;font-size:8pt;
+  font-family:'Space Mono',monospace;letter-spacing:.06em;color:#CFE2D6}
+.recipe .rbody{display:grid;grid-template-columns:1fr 1.4fr;gap:0}
+.recipe .ing{padding:12px 15px;background:var(--cream-2);font-size:9.2pt}
+.recipe .ing h5,.recipe .prep h5{font-family:'Space Mono',monospace;font-size:7.5pt;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.recipe .ing ul{list-style:none} .recipe .ing li{padding:2px 0}
+.recipe .prep{padding:12px 15px;font-size:9.3pt}
+.recipe .prep ol{margin-left:15px} .recipe .prep li{margin-bottom:4px}
+.recipe .why{background:#EAF3EC;border-top:1px solid var(--mist);padding:9px 15px;
+  font-size:8.7pt;color:var(--emerald)}
+.recipe .why b{font-family:'Space Mono',monospace;font-size:7pt;letter-spacing:.14em;
+  text-transform:uppercase}
+
+.two{columns:2;column-gap:16px}
+.mini{font-size:9pt;color:var(--ink-soft)}
+.center{text-align:center}
+.seal{width:70px;height:70px;border:2px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
+  font-weight:900;color:var(--gold);font-size:22pt;margin:0 auto 12px}
