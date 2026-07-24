@@ -93,6 +93,16 @@ section{padding:64px 0}
 .item p{color:var(--ink-soft);font-size:15.5px}
 .item .val{position:absolute;top:20px;right:20px;font-family:'Space Mono',monospace;font-size:13px;color:var(--sage)}
 .item.main{grid-column:1/-1;background:linear-gradient(120deg,#eaf3ec,#e1eee4);border-color:var(--sage)}
+.item .thumb{margin:-4px -4px 14px;border-radius:12px;overflow:hidden;background:#F3ECDD;height:158px}
+.item .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* imagen del hero */
+.hero-media{position:relative}
+.hero-media img{width:100%;height:auto;border-radius:16px;display:block;
+  box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.hero-media .tag{position:absolute;bottom:-14px;right:14px;background:var(--gold);color:#3a2c07;
+  font-family:'Space Mono',monospace;font-weight:700;font-size:12px;padding:8px 15px;border-radius:999px;
+  box-shadow:0 8px 18px rgba(0,0,0,.3)}
 
 /* método · arco de 21 días (firma) */
 .method{background:var(--cream2)}
@@ -200,18 +210,10 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
       <a href="#comprar" class="btn">Quiero desinflamarme <small>· acceso inmediato</small></a>
       <p class="micro">Contenido educativo de alimentación y hábitos · No sustituye consulta médica</p>
     </div>
-    <div>
-      <div class="book">
-        <div class="cov">
-          <div class="bk">Método Vientre Ligero</div>
-          <div>
-            <svg class="leaf" viewBox="0 0 120 60" fill="none"><path d="M60 54 C60 40 46 34 30 34 C30 20 44 8 60 8 C76 8 90 20 90 34 C74 34 60 40 60 54 Z" stroke="#E8D9AE" stroke-width="1.6" fill="rgba(190,154,69,.12)"/><path d="M60 52 L60 20 M60 34 C52 30 46 30 40 30 M60 40 C68 36 74 36 80 36" stroke="#E8D9AE" stroke-width="1.3"/></svg>
-            <h3 style="margin-top:12px">Adiós Barriga <em>Hinchada</em></h3>
-          </div>
-          <div class="bs">Plan de 21 días · comida real · sin pastillas</div>
-        </div>
-        <div class="tag">+ 4 bonos</div>
-      </div>
+    <div class="hero-media">
+      <img src="img/hero.jpg" width="1600" height="1040"
+        alt="Guía Adiós Barriga Hinchada con sus 4 bonos" fetchpriority="high">
+      <span class="tag">Guía + 4 bonos</span>
     </div>
   </div>
 </header>
@@ -259,10 +261,10 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
         <p>El plan completo de 21 días: menús día a día, listas de compras económicas, recetario y
           la tabla "Sí / Con moderación / Evitar" para pegar en tu nevera.</p>
       </div>
-      <div class="item"><span class="val">valor $9</span><div class="n">Bono 01</div><h3>7 Licuados de la Mañana</h3><p>Para empezar el día desinflamado y con energía. Menos de 5 minutos cada uno.</p></div>
-      <div class="item"><span class="val">valor $7</span><div class="n">Bono 02</div><h3>20 Alimentos que te Hinchan</h3><p>Tabla imprimible de reemplazos: en vez de esto… elige esto.</p></div>
-      <div class="item"><span class="val">valor $7</span><div class="n">Bono 03</div><h3>Qué pedir cuando comes fuera</h3><p>Guía exprés para no arruinar tu progreso en restaurantes y reuniones.</p></div>
-      <div class="item"><span class="val">valor $7</span><div class="n">Bono 04</div><h3>Planificador de 21 Días</h3><p>Para imprimir y marcar tu progreso. Ver el avance es la mejor motivación.</p></div>
+      <div class="item"><div class="thumb"><img src="img/bonus-1.jpg" alt="Mockup del bono 7 Licuados de la Mañana" loading="lazy"></div><span class="val">valor $9</span><div class="n">Bono 01</div><h3>7 Licuados de la Mañana</h3><p>Para empezar el día desinflamado y con energía. Menos de 5 minutos cada uno.</p></div>
+      <div class="item"><div class="thumb"><img src="img/bonus-2.jpg" alt="Mockup del bono 20 Alimentos que te Hinchan" loading="lazy"></div><span class="val">valor $7</span><div class="n">Bono 02</div><h3>20 Alimentos que te Hinchan</h3><p>Tabla imprimible de reemplazos: en vez de esto… elige esto.</p></div>
+      <div class="item"><div class="thumb"><img src="img/bonus-3.jpg" alt="Mockup del bono Qué pedir cuando comes fuera" loading="lazy"></div><span class="val">valor $7</span><div class="n">Bono 03</div><h3>Qué pedir cuando comes fuera</h3><p>Guía exprés para no arruinar tu progreso en restaurantes y reuniones.</p></div>
+      <div class="item"><div class="thumb"><img src="img/bonus-4.jpg" alt="Mockup del bono Planificador de 21 Días" loading="lazy"></div><span class="val">valor $7</span><div class="n">Bono 04</div><h3>Planificador de 21 Días</h3><p>Para imprimir y marcar tu progreso. Ver el avance es la mejor motivación.</p></div>
     </div>
   </div>
 </section>
