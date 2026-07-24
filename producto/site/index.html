@@ -210,6 +210,19 @@ a,button,summary{touch-action:manipulation}
 .pay{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:20px;font-size:.82rem;color:var(--ink2)}
 .pay span{display:flex;align-items:center;gap:7px}.pay .ic{width:1.05em;height:1.05em;color:var(--teal)}
 
+/* ============================================================ 5 HERRAMIENTAS */
+.tools5{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:38px}
+.t5{position:relative;padding:0 20px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.t5+.t5{border-left:1px solid var(--line)}
+.t5 .shot{height:190px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:18px}
+.t5 .shot img{max-height:190px;width:auto;object-fit:contain}
+.t5 .n{position:absolute;top:-6px;left:14px;width:38px;height:38px;border-radius:50%;
+  background:var(--abyss);color:#fff;font-family:var(--disp);font-weight:900;font-size:1.05rem;
+  display:grid;place-items:center;box-shadow:0 8px 18px -6px rgba(5,49,58,.6);z-index:2}
+.t5 h3{font-family:var(--disp);font-weight:900;font-size:1.22rem;color:var(--deep);
+  line-height:1.12;margin-bottom:8px;letter-spacing:-.015em}
+.t5 p{font-size:.88rem;color:var(--ink2);line-height:1.5}
+
 /* ============================================================ DOS PLANES */
 .plans{display:grid;grid-template-columns:1fr 1.14fr;gap:22px;align-items:start;max-width:960px;margin:0 auto}
 .plan{background:linear-gradient(180deg,#fff,#FCFAF4);border-radius:var(--rad);box-shadow:var(--sh);
@@ -349,6 +362,11 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   .flags{display:none}
   .plans{grid-template-columns:1fr;gap:18px;max-width:520px}
   .plan.best{order:-1}
+  .tools5{grid-template-columns:repeat(2,1fr);gap:34px 0}
+  .t5{padding:0 14px}
+  .t5+.t5{border-left:0}
+  .t5:nth-child(even){border-left:1px solid var(--line)}
+  .t5 .shot{height:150px}.t5 .shot img{max-height:150px}
 }
 @media (max-width:600px){
   .sticky{display:flex}body{padding-bottom:74px}
@@ -450,9 +468,44 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <div class="head center">
       <span class="klabel" style="justify-content:center"><span class="bar"></span><span class="eyebrow">Lo que recibes hoy</span><span class="bar"></span></span>
-      <h2>Dos herramientas que trabajan juntas</h2>
-      <p>Una te muestra el camino. La otra te dice, con tus números, si el camino te conviene.</p>
+      <h2>Recibe <span style="color:var(--sand-2)">5 herramientas prácticas</span> para montar, gestionar y hacer rentable tu cultivo</h2>
+      <p>Tres guías y dos planillas editables. Unas te muestran el camino; otras te dicen, con tus números, si el camino te conviene.</p>
     </div>
+
+    <!-- ---------- LÍNEA DE LAS 5 HERRAMIENTAS ---------- -->
+    <div class="tools5">
+      <div class="t5">
+        <span class="n">1</span>
+        <div class="shot"><img src="img/tools/t1-empezando.png" width="413" height="520" loading="lazy" alt="Manual Empezando desde Cero"></div>
+        <h3>Empezando<br>desde Cero</h3>
+        <p>Manual paso a paso para montar tu primer tanque y evitar los errores más comunes.</p>
+      </div>
+      <div class="t5">
+        <span class="n">2</span>
+        <div class="shot"><img src="img/tools/t2-acelerador.png" width="413" height="520" loading="lazy" alt="Acelerador Tilapia"></div>
+        <h3>Acelerador<br>Tilapia</h3>
+        <p>Plan de alimentación semana a semana, checklist de arranque y cronograma de manejo.</p>
+      </div>
+      <div class="t5">
+        <span class="n">3</span>
+        <div class="shot"><img src="img/tools/t3-rentable.png" width="413" height="520" loading="lazy" alt="Guía Tilapia Rentable"></div>
+        <h3>Guía Tilapia<br>Rentable</h3>
+        <p>Cuánto cuesta empezar, el flujo de caja de tu primer ciclo y cómo vender tu cosecha.</p>
+      </div>
+      <div class="t5">
+        <span class="n">4</span>
+        <div class="shot"><img src="img/tools/t4-proyeccion.png" width="520" height="412" loading="lazy" alt="Proyección a 12 meses en planilla"></div>
+        <h3>Proyección<br>12 Meses</h3>
+        <p>Planilla para proyectar producción, costos, ingresos y utilidades mes a mes.</p>
+      </div>
+      <div class="t5">
+        <span class="n">5</span>
+        <div class="shot"><img src="img/tools/t5-calculadora.png" width="292" height="520" loading="lazy" alt="Calculadora de ROI"></div>
+        <h3>Calculadora<br>ROI Tilapia</h3>
+        <p>Calcula tu retorno con los precios de tu ciudad y mide la rentabilidad real.</p>
+      </div>
+    </div>
+
     <div style="margin-top:34px">
       <div class="tool">
         <div class="tvisual">
@@ -595,10 +648,11 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <ul class="plist">
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Guía Tilapia Rentable</b> — inversión, costos y cómo vender</span></li>
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Calculadora de ROI</b> editable, con los precios de tu ciudad</span></li>
-          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Plan de alimentación semana a semana</span></li>
-          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Proyección de ganancias a 12 meses</span></li>
-          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Manual de montaje y primeros 30 días</span></li>
+          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Empezando desde Cero (montaje y primeros 30 días)</span></li>
+          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Acelerador Tilapia (plan de alimentación)</span></li>
+          <li class="off"><svg class="ic"><use href="#i-x"/></svg><span>Proyección a 12 meses (planilla)</span></li>
         </ul>
+        <p class="pnote2" style="margin-bottom:10px"><b>2</b> de las 5 herramientas</p>
         <div class="pprice"><span class="old mono">$19</span>
           <span class="now"><sup>USD</sup><span class="mono">6,90</span></span></div>
         <p class="pnote2">Pago único · entrega inmediata</p>
@@ -610,14 +664,15 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <span class="flag">⭐ El más elegido · Ahorras $47</span>
         <span class="pname">Plan Completo</span>
         <h3>El cultivo entero</h3>
-        <p class="ptag">Cómo montarlo <em>y</em> cuánto rinde. Los 4 materiales juntos.</p>
-        <div class="combo"><img src="img/combo-completo.jpg" width="900" height="900" loading="lazy" alt="Los 4 materiales del Plan Completo"></div>
+        <p class="ptag">Cómo montarlo <em>y</em> cuánto rinde. Las 5 herramientas juntas.</p>
+        <div class="combo"><img src="img/combo-completo.jpg" width="1000" height="483" loading="lazy" alt="Las 5 herramientas del Plan Completo"></div>
         <ul class="plist">
-          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Todo lo del Plan Esencial</b> (guía + calculadora)</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Todo lo del Plan Esencial</b> (guía + calculadora de ROI)</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Empezando desde Cero</b> — montaje, agua, alevines y tus primeros 30 días</span></li>
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Acelerador Tilapia</b> — plan de alimentación semana a semana</span></li>
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Proyección a 12 meses</b> en planilla editable</span></li>
-          <li><svg class="ic"><use href="#i-check"/></svg><span><b>Cultivo de Tilapia Desde Cero</b> — montaje, agua, alevines y tus primeros 30 días</span></li>
         </ul>
+        <p class="pnote2" style="margin-bottom:10px"><b>Las 5</b> herramientas · 3 guías + 2 planillas</p>
         <span class="save">Valor total $62 — hoy pagas $14,90</span>
         <div class="pprice"><span class="old mono">$62</span>
           <span class="now"><sup>USD</sup><span class="mono">14,90</span></span></div>
