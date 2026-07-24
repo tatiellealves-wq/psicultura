@@ -1,0 +1,34 @@
+name: Deploy Hígado a Hostinger (FTP)
+
+# Publica automáticamente la landing de saludeducativa.shop cuando cambia.
+# Aislado del deploy de tilapia: otra carpeta, otros secretos, otro dominio.
+on:
+  push:
+    branches: [ claude/latam-piscicultura-pdf-market-pey8iu ]
+    paths:
+      - 'producto-higado/site/**'
+      - '.github/workflows/deploy-higado.yml'
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Subir el sitio por FTP a public_html de saludeducativa.shop
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP2_SERVER }}
+          username: ${{ secrets.FTP2_USERNAME }}
+          password: ${{ secrets.FTP2_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 90000
+          local-dir: ./producto-higado/site/
+          # Cuenta FTP dedicada que inicia sesión DENTRO de public_html del dominio.
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
