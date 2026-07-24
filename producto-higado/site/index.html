@@ -166,7 +166,7 @@ footer .disc{max-width:700px;margin:0 auto 12px;color:#9CC0AA;line-height:1.6}
     <h1>Adiós Barriga<br><em>Hinchada</em></h1>
     <p class="sub">Un plan simple de 21 días para desinflamar tu vientre y sentirte ligero — con comida real, sin pastillas.</p>
     <div class="chips"><span class="chip">21 días</span><span class="chip">Comida real</span><span class="chip">Sin pastillas</span></div>
-    <a href="#oferta" class="btn">Quiero mi plan <small>· ver la oferta</small></a>
+    <a href="#" class="btn" id="cta-hero">Quiero mi plan <small>· acceso inmediato</small></a>
     <p class="micro">Contenido educativo de alimentación y hábitos · No sustituye consulta médica</p>
   </div>
   <div class="hero-media">
@@ -310,7 +310,8 @@ footer .disc{max-width:700px;margin:0 auto 12px;color:#9CC0AA;line-height:1.6}
 <script>
   var CHECKOUT_URL = "https://pay.hotmart.com/N106864119G?checkoutMode=10";
   function goCheckout(e){ if(CHECKOUT_URL.indexOf('http')===0){ e.preventDefault(); window.open(CHECKOUT_URL,'_blank'); } }
-  ['cta-buy','cta-sticky','cta-faq'].forEach(function(id){ var el=document.getElementById(id); if(el) el.addEventListener('click',goCheckout); });
+  // Todos los botones van directo al checkout
+  document.querySelectorAll('.btn').forEach(function(el){ el.addEventListener('click',goCheckout); });
 
   // barra fija tras el hero
   var sticky=document.getElementById('sticky'), hero=document.querySelector('.hero');
