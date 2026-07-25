@@ -56,9 +56,9 @@ Deja de improvisar. Empieza sabiendo qué haces — y cuánto da.
 |---|---|
 | Guía Tilapia Rentable | $19 |
 | Calculadora de ROI | $19 |
-| Acelerador Tilapia | $12 |
+| Acelerador Tilapia | $11 |
 | Cultivo de Tilapia Desde Cero | $12 |
-| **Valor total** | **$62** |
+| **Valor total** | **$61** |
 | **Hoy** | **$14,90** |
 
 > Los valores del stack están alineados con el precio real de cada pieza suelta
@@ -69,17 +69,18 @@ Deja de improvisar. Empieza sabiendo qué haces — y cuánto da.
 
 ## ⚠️ Conflicto de precios a resolver
 
-Con el Completo a **$14,90**, el order bump deja de tener sentido:
+Precio actual del order bump: **$10,90**.
 
-- Esencial $6,90 **+** bump Acelerador $12 = **$18,90**
-- Plan Completo (4 productos) = **$14,90**
+- Esencial $6,90 **+** bump Acelerador $10,90 = **$17,80**  (2 productos)
+- Plan Completo = **$14,90**  (4 productos / 5 herramientas)
 
-El que acepta el bump paga **más por menos**. Hay que ajustar una de las dos cosas:
+El que acepta el bump paga **$2,90 más y se lleva menos**. Sigue siendo
+incoherente si el cliente compara las dos rutas.
 
-**Opción A (recomendada):** bajar el order bump del Acelerador a **$7**.
-→ Esencial + bump = $13,90 · Completo = $14,90. La escalera queda coherente
-y el Completo sigue siendo la mejor oferta.
+**Opción A (recomendada):** bajar el order bump a **$7**.
+→ Esencial + bump = $13,90 · Completo = $14,90. La escalera queda limpia
+y el Completo sigue siendo la mejor oferta por muy poco más.
 
 **Opción B:** quitar el order bump y dejar solo los dos planes en la página.
 
-**Opción C:** subir el Completo a ~$19,90 y mantener el bump en $12.
+**Opción C:** subir el Completo a ~$19,90 y mantener el bump en $10,90.

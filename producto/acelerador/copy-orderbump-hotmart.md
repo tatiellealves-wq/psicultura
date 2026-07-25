@@ -1,7 +1,7 @@
 # Order Bump — Acelerador Tilapia (para colar na Hotmart)
 
 Produto principal: **Cultivo Rentable de Tilapia** ($6,90)
-Order bump: **Acelerador Tilapia** (+$12)  →  ticket sobe de $6,90 para ~$18,90
+Order bump: **Acelerador Tilapia** (+$10,90)  →  ticket sobe de $6,90 para $17,80
 
 Imagem do bump: `orderbump-hotmart.png` (1080×1080)
 
@@ -11,7 +11,7 @@ Imagem do bump: `orderbump-hotmart.png` (1080×1080)
 Acelerador Tilapia — Plan de alimentación + Proyección 12 meses
 
 ## Título do checkbox (chamada)
-➕ SÍ, quiero el Acelerador Tilapia (+$12)
+➕ SÍ, quiero el Acelerador Tilapia (+$10,90)
 
 ## Descrição (texto que aparece embaixo do checkbox)
 Suma a tu guía las 4 herramientas que te ahorran errores y tiempo:
@@ -25,7 +25,7 @@ Deja de adivinar y arranca con números claros. Entrega inmediata junto a tu gu�
 ---
 
 ## Versão curta (se a Hotmart limitar caracteres)
-➕ SÍ, quiero el Acelerador Tilapia (+$12): plan de alimentación semana a semana,
+➕ SÍ, quiero el Acelerador Tilapia (+$10,90): plan de alimentación semana a semana,
 proyección de ganancias a 12 meses (planilla editable) y checklist de arranque.
 Arranca con números, no adivinando.
 
@@ -33,9 +33,9 @@ Arranca con números, no adivinando.
 
 ## Onde configurar na Hotmart
 Produtos → (Cultivo Rentable de Tilapia) → **Order Bump** →
-"Adicionar order bump" → seleciona o produto/entrega do Acelerador ($12) →
+"Adicionar order bump" → seleciona o produto/entrega do Acelerador ($10,90) →
 cola o título e a descrição acima → sobe a imagem `orderbump-hotmart.png`.
 
-> ⚠️ O Acelerador precisa existir como um produto/oferta na sua conta Hotmart (preço $12)
+> ⚠️ O Acelerador precisa existir como um produto/oferta na sua conta Hotmart (preço $10,90)
 > para poder ser vinculado como bump. A entrega são os 2 arquivos: `Acelerador-Tilapia.pdf`
 > + `Proyeccion-12-Meses-Tilapia.xlsx`.
