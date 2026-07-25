@@ -13,3 +13,7 @@ venv/
 
 # Artifact generado (build)
 producto/site/_artifact.html
+
+# Copias temporales de QA de la landing (no publicar)
+producto/site/_*.html
+producto-higado/site/_*.html
