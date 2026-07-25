@@ -33,7 +33,7 @@
   --paper:#FBF8F1; --paper2:#F3EDE0; --card:#FFFFFF; --line:#E6DFCF; --line2:#D9E4E3;
   --sand:#E4A032; --sand-2:#C9861B; --sand-ink:#3A2606;
   --coral:#CE4B2B;
-  --ink:#12262B; --ink2:#3E555A; --muted:#6E7F80;
+  --ink:#12262B; --ink2:#3E555A; --muted:#627375;
   --gold-tint:#FBF1DC;
   --disp:'Fraunces',Georgia,serif;
   --body:'Hanken Grotesk',system-ui,sans-serif;
@@ -239,8 +239,8 @@ a,button,summary{touch-action:manipulation}
 .plan .plist{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0 0 20px;flex:1}
 .plan .plist li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:var(--ink2);line-height:1.45}
 .plan .plist .ic{width:1.15em;height:1.15em;color:var(--teal);margin-top:.22em;stroke-width:2.4}
-.plan .plist li.off{color:#9AA8A9}
-.plan .plist li.off .ic{color:#C6CFCF}
+.plan .plist li.off{color:#66797A}
+.plan .plist li.off .ic{color:#7E8E8F}
 .plan .pprice{display:flex;align-items:baseline;gap:11px;margin-bottom:4px}
 .plan .pprice .old{font-family:var(--mono);font-size:1.05rem;color:var(--muted);text-decoration:line-through}
 .plan .pprice .now{font-family:var(--disp);font-weight:900;font-size:2.9rem;color:var(--ink);line-height:1}
@@ -511,14 +511,18 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       </div>
     </div>
 
-    <div style="margin-top:34px">
+    <div class="head center" style="margin-top:54px;margin-bottom:0">
+      <span class="eyebrow">Míralas por dentro</span>
+      <p style="margin-top:8px">Así se ven dos de las cinco: la guía principal y la calculadora.</p>
+    </div>
+    <div style="margin-top:26px">
       <div class="tool">
         <div class="tvisual">
           <span class="tag"><svg class="ic"><use href="#i-doc"/></svg> Producto principal · PDF</span>
           <div class="frame"><img src="img/ebook-costos.png" width="1158" height="1638" loading="lazy" alt="Página interna de la guía con tabla de costos"></div>
         </div>
         <div>
-          <span class="tno">01 — La guía</span>
+          <span class="tno">Herramienta 3 — por dentro</span>
           <h3>Tilapia Rentable</h3>
           <div class="fmt">12 páginas · español · se lee en una tarde</div>
           <ul class="flist">
@@ -535,7 +539,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
           <div class="frame"><img src="img/calculadora.png" width="1440" height="992" loading="lazy" alt="Calculadora de retorno (ROI) en Excel"></div>
         </div>
         <div>
-          <span class="tno">02 — El bono</span>
+          <span class="tno">Herramienta 5 — por dentro</span>
           <h3>Calculadora de ROI</h3>
           <div class="fmt">editable · resultados automáticos · tu moneda</div>
           <ul class="flist">
@@ -666,7 +670,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <div class="pprice"><span class="old mono">$19</span>
           <span class="now"><sup>USD</sup><span class="mono">6,90</span></span></div>
         <p class="pnote2">Pago único · entrega inmediata</p>
-        <a href="#comprar" class="btn btn-line">Quiero el Esencial</a>
+        <a href="https://pay.hotmart.com/N106802906U?checkoutMode=10" data-checkout="esencial" target="_blank" rel="noopener" class="btn btn-line">Quiero el Esencial</a>
       </div>
 
       <!-- ---------- PLAN COMPLETO ---------- -->
@@ -687,7 +691,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <div class="pprice"><span class="old mono">$61</span>
           <span class="now"><sup>USD</sup><span class="mono">14,90</span></span></div>
         <p class="pnote2">Pago único · entrega inmediata · acceso de por vida</p>
-        <a href="#completo" class="btn btn-gold">Quiero el Plan Completo <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+        <a href="https://pay.hotmart.com/W106875284O?checkoutMode=10" data-checkout="completo" target="_blank" rel="noopener" class="btn btn-gold">Quiero el Plan Completo <svg class="ic arw"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
 
@@ -765,11 +769,11 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <details class="q"><summary><span class="qn">01</span>¿Necesito experiencia previa?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">No. Está pensada para principiantes: empieza desde cuánto invertir y cómo planear, no da por sentado que ya sabes criar peces. Si ya tienes experiencia, te servirá sobre todo la parte financiera y la calculadora.</div></details>
       <details class="q"><summary><span class="qn">02</span>¿Cómo y cuándo recibo el material?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
-        <div class="a">De inmediato. Apenas se confirma tu pago recibes por correo el acceso para descargar el PDF y la calculadora. Los abres en tu celular o computadora.</div></details>
+        <div class="a">De inmediato. Apenas se confirma tu pago recibes por correo el acceso para descargar todo lo de tu plan: el Esencial incluye la guía y la calculadora; el Plan Completo incluye las 5 herramientas. Los abres en tu celular o computadora.</div></details>
       <details class="q"><summary><span class="qn">03</span>¿Sirve para mi país y mi moneda?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Sí. Los ejemplos usan dólares como referencia, pero la calculadora está hecha para que pongas los precios y la moneda de tu ciudad. Funciona en cualquier país de habla hispana — tú defines la moneda.</div></details>
       <details class="q"><summary><span class="qn">04</span>¿Es un curso en video o un PDF?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
-        <div class="a">Es una guía en PDF (12 páginas, directa) más una calculadora en Excel/Google Sheets. Lo elegimos así a propósito: la lees en una tarde y actúas, en vez de posponer horas de video.</div></details>
+        <div class="a">Son PDF y planillas, no video. El Plan Esencial trae la guía en PDF más la calculadora en Excel/Google Sheets; el Plan Completo suma dos guías más y una segunda planilla. Lo elegimos así a propósito: lo lees en una tarde y actúas, en vez de posponer horas de video.</div></details>
       <details class="q"><summary><span class="qn">05</span>¿Y si no me gusta?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Tienes 7 días de garantía incondicional. Si no es para ti, te devolvemos el 100% de tu dinero con un simple correo. Sin preguntas.</div></details>
       <details class="q"><summary><span class="qn">06</span>¿Por qué cuesta tan poco?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
@@ -827,8 +831,8 @@ function enlazarCheckout(selector, url){
     a.setAttribute('rel','noopener');
   });
 }
-enlazarCheckout('a[href="#comprar"]',  CHECKOUT_ESENCIAL);
-enlazarCheckout('a[href="#completo"]', CHECKOUT_COMPLETO);
+enlazarCheckout('a[data-checkout="esencial"]', CHECKOUT_ESENCIAL);
+enlazarCheckout('a[data-checkout="completo"]', CHECKOUT_COMPLETO);
 (function(){
   const KEY='tilapia_offer_deadline';
   let dl = localStorage.getItem(KEY); const now = Date.now();
@@ -837,8 +841,8 @@ enlazarCheckout('a[href="#completo"]', CHECKOUT_COMPLETO);
   function tick(){ let d=Math.max(0,Math.floor((+dl-Date.now())/1000));
     const m=Math.floor(d/60), s=d%60;
     if(min)min.textContent=String(m).padStart(2,'0'); if(sec)sec.textContent=String(s).padStart(2,'0');
-    if(d<=0)clearInterval(iv); }
-  tick(); const iv=setInterval(tick,1000);
+    if(d<=0 && iv) clearInterval(iv); }
+  let iv=null; tick(); iv=setInterval(tick,1000);
 })();
 
 /* Revelación al hacer scroll (se desactiva con prefers-reduced-motion) */
