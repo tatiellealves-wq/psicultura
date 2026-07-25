@@ -846,6 +846,35 @@ function enlazarCheckout(selector, url){
 }
 enlazarCheckout('a[data-checkout="esencial"]', CHECKOUT_ESENCIAL);
 enlazarCheckout('a[data-checkout="completo"]', CHECKOUT_COMPLETO);
+
+/* Asegura que el fbclid llegue al checkout como parámetro propio.
+   El script de UTMify reescribe los enlaces y guarda el fbclid dentro de
+   utm_content (formato ::fbclid::), así el pixel de Hotmart no lo reconoce
+   y el Purchase se envía sin fbc — sin fbc, Meta no puede atribuir la venta
+   al clic. Aquí lo re-agregamos justo antes de navegar, después de que
+   cualquier otro script haya modificado el enlace. */
+(function(){
+  var KEY = 'fbclid_guardado', fbclid = null;
+  try{
+    fbclid = new URLSearchParams(window.location.search).get('fbclid');
+    if(fbclid) sessionStorage.setItem(KEY, fbclid);
+    else fbclid = sessionStorage.getItem(KEY);
+  }catch(e){ /* sessionStorage bloqueado: seguimos con lo que haya en la URL */ }
+  if(!fbclid) return;
+
+  function reponer(a){
+    var href = a.getAttribute('href') || '';
+    if(href.indexOf('fbclid=') !== -1) return;      // ya lo lleva
+    if(href.indexOf('pay.hotmart.com') === -1) return;
+    a.setAttribute('href', href + (href.indexOf('?') >= 0 ? '&' : '?') +
+      'fbclid=' + encodeURIComponent(fbclid));
+  }
+  document.querySelectorAll('a[data-checkout]').forEach(function(a){
+    ['pointerdown','mousedown','click'].forEach(function(ev){
+      a.addEventListener(ev, function(){ reponer(a); }, true);
+    });
+  });
+})();
 (function(){
   const KEY='tilapia_offer_deadline';
   let dl = localStorage.getItem(KEY); const now = Date.now();
