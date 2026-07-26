@@ -17,6 +17,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel (base en reserva)
+     Solo hace init — a propósito NO dispara track('PageView') ni ningún otro
+     evento, porque hoy es UTMify quien envía PageView/ViewContent/Purchase al
+     pixel 2630923590655993. Este bloque solo deja el objeto fbq listo para
+     el día que se decida mover los eventos a Hotmart o a la página: ahí se
+     agregan los fbq('track', ...) que hagan falta, sin tener que reinstalar
+     el snippet base. Mientras tanto no envía nada, así que no duplica nada. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2630923590655993');
+</script>
+<!-- /Meta Pixel -->
 <!-- UTMify -->
 <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
