@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cultivo Rentable de Tilapia — Sabe si tu tanque dará ganancia antes de invertir tu dinero</title>
-<meta name="description" content="Guía práctica + calculadora de ROI para criar tilapia con poca inversión, en cualquier país de habla hispana. Calcula tu inversión, tu costo real por kilo y en cuántos ciclos recuperas tu dinero — antes de empezar.">
+<title>Cría de Tilapia desde Cero — Cómo empezar tu primer tanque paso a paso, sin experiencia previa</title>
+<meta name="description" content="Para quien nunca crió un pez. Guías paso a paso para montar tu primer tanque de tilapia — el agua, los alevines, la alimentación — más la calculadora que te dice si te conviene, con los precios de tu ciudad.">
 <meta name="theme-color" content="#05313A">
-<meta property="og:title" content="Cultivo Rentable de Tilapia">
-<meta property="og:description" content="Sabe si tu tanque de tilapia dará ganancia — antes de invertir tu dinero.">
+<meta property="og:title" content="Cría de Tilapia desde Cero">
+<meta property="og:description" content="Empieza tu primer tanque de tilapia paso a paso, sin experiencia previa — y sabiendo cuánto puede rendir.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cultivorentabledetilapia.online/">
 <meta property="og:image" content="https://cultivorentabledetilapia.online/img/og-image.jpg">
@@ -91,7 +91,8 @@ a,button,summary{touch-action:manipulation}
 
 .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center;padding:44px 0 76px}
 .hero h1{font-size:clamp(2.55rem,5.6vw,4.15rem);margin:20px 0 0}
-.hero h1 .u{background:linear-gradient(transparent 84%, rgba(244,198,116,.6) 84%);padding-bottom:.02em}
+.hero h1 .u{background:linear-gradient(transparent 84%, rgba(244,198,116,.6) 84%);padding-bottom:.02em;
+  white-space:nowrap}
 .hero h1 em{font-style:italic;font-weight:500;color:#FFCE7A}
 .hero .sub{font-size:1.2rem;color:#D3E7E6;margin:24px 0 32px;max-width:33ch;font-weight:400}
 .hero .actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
@@ -351,7 +352,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 /* ============================================================ AUTHORITY */
 .authority{background:var(--abyss);color:#fff}
 .astrip{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:center;margin-top:42px}
-.astat .big{font-family:var(--disp);font-weight:900;font-size:2.7rem;color:var(--surf);line-height:1}
+.astat .big{font-family:var(--disp);font-weight:900;font-size:2.7rem;color:var(--surf);line-height:1;
+  white-space:nowrap}
 .astat .lbl{color:#B7D4D3;font-size:.98rem;margin-top:10px}
 .authority .src{text-align:center;font-family:var(--mono);font-size:.72rem;color:#6E8F91;margin-top:28px;letter-spacing:.02em}
 .authority .head h2{color:#fff}.authority .eyebrow{color:var(--surf)}
@@ -375,9 +377,20 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 }
 @media (max-width:600px){
   .sticky{display:flex}body{padding-bottom:74px}
-  .hero h1{font-size:2.4rem}.blist{grid-template-columns:1fr}
+  .hero h1{font-size:2.18rem}.blist{grid-template-columns:1fr}
+  .hero-grid{padding:26px 0 56px;gap:22px}
+  .hero .sub{font-size:1.06rem;margin:16px 0 24px;max-width:none}
+  .hero .actions{width:100%;gap:10px}
+  .hero .actions .btn{width:100%;justify-content:center}
+  .hero .reassure{margin-top:16px;font-size:.84rem;line-height:1.45}
+  .eyebrow{letter-spacing:.16em;font-size:.67rem}
   .topbar .btn{display:none}
   .chip.c1{right:2%}.chip.c2{right:0}
+  .astrip{grid-template-columns:1fr;gap:22px;max-width:340px;margin-left:auto;margin-right:auto}
+  .astat .big{font-size:2.4rem}
+  /* en móvil el banner del kit repite la imagen que ya va dentro del plan
+     y empuja el precio fuera de pantalla — se oculta para llegar antes al CTA */
+  .kitbanner{display:none}
   .price .now{font-size:2.9rem}.timer .cell{min-width:56px}
   .plan{padding:26px 22px 28px}.plan.best{padding-top:42px}
   .plan .pprice .now{font-size:2.5rem}
@@ -424,21 +437,21 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     </nav>
     <div class="hero-grid">
       <div>
-        <span class="eyebrow" style="color:#8FE0DE">Para quien quiere vivir de la tilapia, no solo intentarlo</span>
-        <h1>Descubre <span class="u">cuánto vas a ganar</span> con tu tanque… <em>antes</em> de invertir tu dinero.</h1>
-        <p class="sub">La guía y la calculadora que convierten el “creo que da” en “sé exactamente cuánto da” — con los precios reales de tu ciudad.</p>
+        <span class="eyebrow" style="color:#8FE0DE">Para quien empieza desde cero</span>
+        <h1>Cría tilapia <span class="u">desde cero</span>, paso a paso… y sabiendo <em>cuánto</em> puede rendir.</h1>
+        <p class="sub">Cómo montar tu primer tanque, qué agua, qué alevines y cuánto alimentar — más la calculadora que te dice si te conviene, con los precios de tu ciudad.</p>
         <div class="actions">
-          <a href="#oferta" class="btn btn-gold">Quiero mi guía hoy
+          <a href="#oferta" class="btn btn-gold">Quiero empezar desde cero
             <svg class="ic arw"><use href="#i-arrow"/></svg></a>
-          <a href="#oferta" class="btn btn-line">Ver los planes</a>
+          <a href="#recibir" class="btn btn-line">Ver qué incluye</a>
         </div>
         <div class="reassure"><svg class="ic"><use href="#i-shield"/></svg>
-          Pago único · Acceso inmediato · Garantía de 7 días</div>
+          Sin experiencia previa · Acceso inmediato · Garantía de 7 días</div>
       </div>
       <div class="stage">
         <div class="water"><img src="img/hero-farmer.jpg" width="1024" height="1024" fetchpriority="high" alt="Pequeño productor de tilapia sosteniendo un pez sano junto a su tanque de cultivo"></div>
-        <div class="chip c1"><svg class="ic"><use href="#i-chart"/></svg>
-          <span><span class="k">Retorno</span><span class="v mono">+24%</span></span></div>
+        <div class="chip c1"><svg class="ic"><use href="#i-flag"/></svg>
+          <span><span class="k">Montaje en</span><span class="v mono">6 pasos</span></span></div>
         <div class="chip c2"><svg class="ic"><use href="#i-clock"/></svg>
           <span><span class="k">Recuperas en</span><span class="v mono">2,9 ciclos</span></span></div>
       </div>
@@ -457,13 +470,13 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 <section class="problem">
   <div class="wrap inner">
     <div>
-      <span class="eyebrow" style="color:#8FE0DE">La verdad que nadie te dice</span>
-      <h2 style="margin-top:12px">Tu tanque no fracasa por el pez. <span class="hl">Fracasa por una cuenta que nadie hizo a tiempo.</span></h2>
-      <p>Ves videos del pH, de la aireación, de la densidad… y ninguno responde lo único que de verdad importa: <b>¿esto me va a dar dinero, o me va a costar mis ahorros?</b> Para cuando descubres la respuesta, el dinero ya está dentro del tanque — y de ahí no vuelve.</p>
+      <span class="eyebrow" style="color:#8FE0DE">Lo que le pasa a todo principiante</span>
+      <h2 style="margin-top:12px">Empezar es fácil. <span class="hl">Empezar bien es lo que nadie te enseña.</span></h2>
+      <p>Buscas y encuentras mil videos sueltos: uno del pH, otro de la aireación, otro de la densidad. Ninguno te dice el <b>orden</b> en que se hacen las cosas — ni cuánto vas a gastar antes de la primera venta. Así arranca la mayoría: improvisando, con el dinero ya dentro del tanque.</p>
     </div>
     <div class="statrow">
-      <div class="stat"><span class="n mono">6</span><span class="t">meses <b>solo gastando</b> antes de la primera venta. Ese "valle" quiebra a quien no lo planea.</span></div>
-      <div class="stat"><span class="n mono">40–70%</span><span class="t">de tu costo es <b>el alimento</b>. Si no lo controlas, no controlas tu ganancia.</span></div>
+      <div class="stat"><span class="n mono">6</span><span class="t">meses <b>solo gastando</b> antes de tu primera venta. Casi ningún principiante lo planea — y ahí se queda.</span></div>
+      <div class="stat"><span class="n mono">40–70%</span><span class="t">de tu costo es <b>el alimento</b>. No medirlo es el error nº1 de quien empieza.</span></div>
     </div>
   </div>
 </section>
@@ -473,8 +486,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <div class="head center">
       <span class="klabel" style="justify-content:center"><span class="bar"></span><span class="eyebrow">Lo que recibes hoy</span><span class="bar"></span></span>
-      <h2>Recibe <span style="color:var(--sand-2)">5 herramientas prácticas</span> para montar, gestionar y hacer rentable tu cultivo</h2>
-      <p>Tres guías y dos planillas editables. Unas te muestran el camino; otras te dicen, con tus números, si el camino te conviene.</p>
+      <h2>Todo lo que necesitas para <span style="color:var(--sand-2)">montar tu primer tanque</span> — y saber si te conviene</h2>
+      <p>Tres guías y dos planillas editables. Empiezas por el montaje desde cero y terminas sabiendo, con tus propios números, cuánto puede rendir.</p>
     </div>
 
     <!-- ---------- LÍNEA DE LAS 5 HERRAMIENTAS ---------- -->
@@ -519,7 +532,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <div class="tool">
         <div class="tvisual">
           <span class="tag"><svg class="ic"><use href="#i-doc"/></svg> Producto principal · PDF</span>
-          <div class="frame"><img src="img/ebook-costos.png" width="1158" height="1638" loading="lazy" alt="Página interna de la guía con tabla de costos"></div>
+          <div class="frame"><img src="img/ebook-costos.jpg" width="900" height="1273" loading="lazy" alt="Página interna de la guía con tabla de costos"></div>
         </div>
         <div>
           <span class="tno">Herramienta 3 — por dentro</span>
@@ -536,7 +549,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <div class="tool flip">
         <div class="tvisual">
           <span class="tag"><svg class="ic"><use href="#i-grid"/></svg> Incluido · Excel / Sheets</span>
-          <div class="frame"><img src="img/calculadora.png" width="1440" height="992" loading="lazy" alt="Calculadora de retorno (ROI) en Excel"></div>
+          <div class="frame"><img src="img/calculadora.jpg" width="1100" height="758" loading="lazy" alt="Calculadora de retorno (ROI) en Excel"></div>
         </div>
         <div>
           <span class="tno">Herramienta 5 — por dentro</span>
@@ -559,17 +572,17 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <div class="head">
       <span class="klabel"><span class="bar"></span><span class="eyebrow">Lo que vas a descubrir</span></span>
-      <h2>Respuestas que hoy no tienes — y que valen tu inversión entera</h2>
+      <h2>Las respuestas que hoy te faltan para arrancar</h2>
     </div>
     <div class="dlist">
-      <div class="di"><span class="n">01</span><p>El <b>error de los 6 meses</b> que vacía la cuenta de 8 de cada 10 principiantes — y por qué casi nadie lo ve venir a tiempo.</p></div>
-      <div class="di"><span class="n">02</span><p>La <b>cifra exacta</b> que decide si ganas o pierdes con cada kilo de pez, y cómo calcularla para tu ciudad en <span class="k">3 minutos</span>.</p></div>
-      <div class="di"><span class="n">03</span><p>Cuánto dinero necesitas <b>REALMENTE</b> tener guardado antes de sembrar el primer alevín. (Pista: no es lo que estás pensando.)</p></div>
-      <div class="di"><span class="n">04</span><p>Cómo cruzar el <b>“valle de la muerte”</b> del cultivo — esos meses en que solo gastas — sin quedarte sin alimento a mitad de camino.</p></div>
-      <div class="di"><span class="n">05</span><p>El precio por kilo que <b>de verdad</b> te deja ganancia — y cómo dejar de regalar tu cosecha al primer intermediario que aparece.</p></div>
-      <div class="di"><span class="n">06</span><p>Tu <b>plan exacto de 30-60-90 días</b>: qué hacer, en qué orden, para no improvisar ni un solo paso.</p></div>
+      <div class="di"><span class="n">01</span><p>El <b>orden correcto</b> para montar tu tanque: qué va primero, qué va después, y por qué saltarse un paso te cuesta el lote entero.</p></div>
+      <div class="di"><span class="n">02</span><p>Por qué <b>ciclar el agua</b> antes de sembrar decide si tus alevines llegan a la semana 3 — y por qué casi ningún principiante lo hace.</p></div>
+      <div class="di"><span class="n">03</span><p>Cuántos peces caben <b>de verdad</b> en tu tanque según el tipo que elijas. (Pista: bastante menos de lo que te van a querer vender.)</p></div>
+      <div class="di"><span class="n">04</span><p>Cuánto alimento dar en <b>cada fase</b>, semana a semana, para dejar de tirar dinero al agua sin darte cuenta.</p></div>
+      <div class="di"><span class="n">05</span><p>Cuánto dinero necesitas tener guardado <b>antes</b> de sembrar el primer alevín — y cómo cruzar los meses en que solo sale plata.</p></div>
+      <div class="di"><span class="n">06</span><p>Tu <b>plan de los primeros 30 días</b>: qué revisar cada mañana, cada semana y cada mes, sin improvisar ni un solo paso.</p></div>
     </div>
-    <div style="margin-top:34px"><a href="#oferta" class="btn btn-gold">Quiero esas respuestas <svg class="ic arw"><use href="#i-arrow"/></svg></a></div>
+    <div style="margin-top:34px"><a href="#oferta" class="btn btn-gold">Quiero empezar con esto claro <svg class="ic arw"><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -578,15 +591,18 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <div class="head center">
       <span class="klabel" style="justify-content:center"><span class="bar"></span><span class="eyebrow">Así de simple</span><span class="bar"></span></span>
-      <h2>De la duda a la decisión, en 3 pasos</h2>
+      <h2>De cero a tu primer tanque, en 3 pasos</h2>
     </div>
     <div class="steps">
       <div class="step"><div class="no">Paso 01</div><span class="ico"><svg class="ic"><use href="#i-doc"/></svg></span>
-        <h3>Descarga todo</h3><p>Apenas confirmas tu pago, recibes la guía y la calculadora al instante, en tu correo.</p></div>
-      <div class="step"><div class="no">Paso 02</div><span class="ico"><svg class="ic"><use href="#i-grid"/></svg></span>
-        <h3>Mete tus números</h3><p>Cambias las celdas amarillas con los precios de alevín, alimento y venta de tu ciudad.</p></div>
+        <h3>Descargas todo hoy</h3><p>Apenas se confirma tu pago, te llegan al correo las guías y las planillas. Sin esperar nada.</p></div>
+      <div class="step"><div class="no">Paso 02</div><span class="ico"><svg class="ic"><use href="#i-drop"/></svg></span>
+        <h3>Montas tu tanque</h3><p>Sigues el paso a paso: el lugar, el agua, ciclar, comprar los alevines y aclimatarlos bien.</p></div>
       <div class="step"><div class="no">Paso 03</div><span class="ico"><svg class="ic"><use href="#i-target"/></svg></span>
-        <h3>Decides con certeza</h3><p>En una tarde sabes cuánto vas a ganar, cuánto invertir y por dónde empezar.</p></div>
+        <h3>Sabes cuánto rinde</h3><p>Pones los precios de tu ciudad en la calculadora y ves tu costo real por kilo y tu retorno.</p></div>
+    </div>
+    <div class="center" style="margin-top:36px;text-align:center">
+      <a href="#oferta" class="btn btn-gold">Empezar mi primer tanque <svg class="ic arw"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -596,23 +612,23 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap grid">
     <div>
       <span class="eyebrow">Por qué este material</span>
-      <h2 style="margin-top:12px">No es otro manual técnico gratis</h2>
-      <p class="lead">Empezamos justo donde los demás terminan: en el dinero. Por eso funciona para quien de verdad quiere vivir de esto.</p>
-      <a href="#oferta" class="btn btn-gold" style="margin-top:26px">Quiero empezar <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+      <h2 style="margin-top:12px">Hecho para quien empieza, no para técnicos</h2>
+      <p class="lead">Los videos sueltos te dan el paso a paso <em>o</em> los números — nunca los dos. Aquí tienes las dos mitades, en el orden correcto y en un solo lugar.</p>
+      <a href="#oferta" class="btn btn-gold" style="margin-top:26px">Quiero empezar bien <svg class="ic arw"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="blist">
+      <div class="b"><span class="ico"><svg class="ic"><use href="#i-flag"/></svg></span>
+        <h4>Desde el paso cero</h4><p>No damos nada por sentado: arranca por el lugar, el agua y cómo montar tu primer tanque.</p></div>
       <div class="b"><span class="ico"><svg class="ic"><use href="#i-coins"/></svg></span>
-        <h4>Enfoque en el dinero</h4><p>Inversión, costos y retorno reales — lo que decide si tu proyecto vive o muere.</p></div>
+        <h4>Y también los números</h4><p>Inversión, costos y retorno reales — la mitad que casi nadie le enseña a un principiante.</p></div>
       <div class="b"><span class="ico"><svg class="ic"><use href="#i-scale"/></svg></span>
-        <h4>Con tus precios</h4><p>No copias cifras ajenas: la calculadora usa el precio de alevín, alimento y venta de tu ciudad.</p></div>
+        <h4>Con tus precios, en tu país</h4><p>No copias cifras ajenas: pones el precio de alevín, alimento y venta de tu ciudad, en tu moneda.</p></div>
       <div class="b"><span class="ico"><svg class="ic"><use href="#i-bolt"/></svg></span>
-        <h4>Directo, sin relleno</h4><p>Nada de 200 páginas que nunca terminas. En una tarde sabes si esto es para ti.</p></div>
-      <div class="b"><span class="ico"><svg class="ic"><use href="#i-drop"/></svg></span>
-        <h4>Se adapta a tu país</h4><p>Metes los precios y la moneda de tu ciudad — no es un texto genérico que no encaja con tu realidad.</p></div>
+        <h4>Directo, sin relleno</h4><p>Nada de 200 páginas que nunca terminas. En una tarde sabes qué hacer y por dónde empezar.</p></div>
       <div class="b"><span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span>
-        <h4>Evitas el error caro</h4><p>El capítulo del "valle de los 6 meses" te ahorra el error que quiebra a la mayoría.</p></div>
+        <h4>Evitas los errores caros</h4><p>El agua sin ciclar y el "valle de los 6 meses": los dos que más lotes y bolsillos han vaciado.</p></div>
       <div class="b"><span class="ico"><svg class="ic"><use href="#i-target"/></svg></span>
-        <h4>Listo para actuar</h4><p>Terminas con un plan de 30-60-90 días y una checklist concreta, no con más dudas.</p></div>
+        <h4>Empiezas el mismo día</h4><p>Terminas con una checklist de montaje y un plan de 30 días concreto, no con más dudas.</p></div>
     </div>
   </div>
 </section>
@@ -657,8 +673,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <!-- ---------- PLAN ESENCIAL ---------- -->
       <div class="plan">
         <span class="pname">Plan Esencial</span>
-        <h3>Los números claros</h3>
-        <p class="ptag">Para saber si tu tanque da ganancia — antes de invertir.</p>
+        <h3>Solo los números</h3>
+        <p class="ptag">Si ya tienes tanque montado y solo te falta la parte financiera.</p>
         <ul class="plist">
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Guía Tilapia Rentable</b> — inversión, costos y cómo vender</span></li>
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Calculadora de ROI</b> editable, con los precios de tu ciudad</span></li>
@@ -675,10 +691,10 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 
       <!-- ---------- PLAN COMPLETO ---------- -->
       <div class="plan best">
-        <span class="flag">⭐ El más elegido · Ahorras $46</span>
+        <span class="flag">⭐ Si empiezas de cero, es este · Ahorras $46</span>
         <span class="pname">Plan Completo</span>
-        <h3>El cultivo entero</h3>
-        <p class="ptag">Cómo montarlo <em>y</em> cuánto rinde. Las 5 herramientas juntas.</p>
+        <h3>De cero a tu primer tanque</h3>
+        <p class="ptag">El montaje paso a paso <em>y</em> los números. Las 5 herramientas juntas.</p>
         <div class="combo"><img src="img/combo-completo.jpg" width="1000" height="483" loading="lazy" alt="Las 5 herramientas del Plan Completo"></div>
         <ul class="plist">
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Todo lo del Plan Esencial</b> (guía + calculadora de ROI)</span></li>
@@ -695,6 +711,11 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       </div>
     </div>
 
+    <p style="text-align:center;color:#B7D4D3;margin-top:24px;font-size:1rem;max-width:56ch;margin-left:auto;margin-right:auto">
+      ¿No sabes cuál elegir? Si <b>nunca criaste tilapia</b>, el que necesitas es el
+      <b style="color:#F4C674">Plan Completo</b> — es el único que trae el montaje del tanque paso a paso.
+    </p>
+
     <div class="pay" style="color:#B7D4D3;margin-top:26px">
       <span><svg class="ic"><use href="#i-lock"/></svg> Pago seguro</span>
       <span><svg class="ic"><use href="#i-card"/></svg> Tarjeta · PayPal · Pago local</span>
@@ -709,16 +730,18 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   <div class="wrap">
     <div class="head center">
       <span class="eyebrow">Un vistazo por dentro</span>
-      <h2>Ejemplos reales del material</h2>
-      <p>Sin humo: estas son páginas reales de la guía y de la calculadora que vas a recibir.</p>
+      <h2>Páginas reales, no promesas</h2>
+      <p>Sin humo: esto es exactamente lo que vas a abrir cuando pagues — empezando por el montaje del tanque.</p>
     </div>
   </div>
   <div class="track">
-    <figure class="slide"><img src="img/ebook-cover.png" width="1158" height="1638" loading="lazy" alt="Portada de la guía"><figcaption class="cap">Portada · edición en español</figcaption></figure>
-    <figure class="slide"><img src="img/ebook-costos.png" width="1158" height="1638" loading="lazy" alt="Tabla de costos"><figcaption class="cap">Cap. 2 · Cuánto cuesta empezar</figcaption></figure>
-    <figure class="slide"><img src="img/ebook-flujo.png" width="1158" height="1638" loading="lazy" alt="Flujo de caja"><figcaption class="cap">Cap. 4 · Flujo de caja del ciclo</figcaption></figure>
-    <figure class="slide"><img src="img/ebook-vender.png" width="1158" height="1638" loading="lazy" alt="Cómo vender la cosecha"><figcaption class="cap">Cap. 6 · Cómo vender tu cosecha</figcaption></figure>
-    <figure class="slide"><img src="img/calculadora.png" width="1440" height="992" loading="lazy" alt="Calculadora de ROI"><figcaption class="cap">Bono · Calculadora de retorno</figcaption></figure>
+    <figure class="slide"><img src="img/cero-montaje.jpg" width="1000" height="1415" loading="lazy" alt="Montaje del tanque paso a paso"><figcaption class="cap">Desde Cero · Cap. 3 — Montaje paso a paso</figcaption></figure>
+    <figure class="slide"><img src="img/cero-ciclar.jpg" width="1000" height="1415" loading="lazy" alt="Cómo ciclar el agua antes de sembrar"><figcaption class="cap">Desde Cero · Ciclar el agua antes de sembrar</figcaption></figure>
+    <figure class="slide"><img src="img/cero-alevines.jpg" width="1000" height="1415" loading="lazy" alt="Aclimatación de los alevines"><figcaption class="cap">Desde Cero · Cap. 4 — Aclimatar los alevines</figcaption></figure>
+    <figure class="slide"><img src="img/cero-plan.jpg" width="1000" height="1415" loading="lazy" alt="Plan de arranque en una página"><figcaption class="cap">Desde Cero · Tu plan de arranque en 1 página</figcaption></figure>
+    <figure class="slide"><img src="img/ebook-costos.jpg" width="900" height="1273" loading="lazy" alt="Tabla de costos"><figcaption class="cap">Rentable · Cuánto cuesta empezar</figcaption></figure>
+    <figure class="slide"><img src="img/ebook-flujo.jpg" width="820" height="1160" loading="lazy" alt="Flujo de caja"><figcaption class="cap">Rentable · Flujo de caja del ciclo</figcaption></figure>
+    <figure class="slide"><img src="img/calculadora.jpg" width="1100" height="758" loading="lazy" alt="Calculadora de ROI"><figcaption class="cap">Calculadora de retorno</figcaption></figure>
   </div>
   <div class="wrap"><p class="hint"><svg class="ic" style="width:1em;height:1em"><use href="#i-arrow"/></svg> desliza para ver más</p></div>
 </section>
@@ -735,7 +758,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <div>
         <span class="eyebrow">Riesgo cero para ti</span>
         <h2 style="margin-top:10px">Prueba sin miedo durante 7 días</h2>
-        <p>Lee la guía, abre la calculadora, mete tus números. Si en 7 días sientes que no era para ti, escribes un correo y te devolvemos el 100% de tu dinero. Sin preguntas, sin trámites. El riesgo lo asumimos nosotros — tú solo decides con la cabeza fría.</p>
+        <p>Descarga todo, lee el paso a paso del montaje, abre la calculadora y mete tus números. Si en 7 días sientes que no era para ti, escribes un correo y te devolvemos el 100% de tu dinero. Sin preguntas, sin trámites. Lo peor que te puede pasar es aprender cómo se monta un tanque — gratis.</p>
       </div>
     </div>
   </div>
@@ -767,16 +790,18 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     <div class="head center"><span class="eyebrow">Antes de decidir</span><h2>Preguntas frecuentes</h2></div>
     <div class="faq">
       <details class="q"><summary><span class="qn">01</span>¿Necesito experiencia previa?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
-        <div class="a">No. Está pensada para principiantes: empieza desde cuánto invertir y cómo planear, no da por sentado que ya sabes criar peces. Si ya tienes experiencia, te servirá sobre todo la parte financiera y la calculadora.</div></details>
-      <details class="q"><summary><span class="qn">02</span>¿Cómo y cuándo recibo el material?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+        <div class="a">Ninguna. Está hecho justamente para quien nunca crió un pez: empieza por elegir el lugar y el agua, sigue con el montaje del tanque, la compra y aclimatación de los alevines y la rutina de tus primeros 30 días. Si ya tienes experiencia, lo que más te va a servir es la parte financiera y la calculadora.</div></details>
+      <details class="q"><summary><span class="qn">02</span>¿Cuánto espacio necesito para empezar?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+        <div class="a">Menos del que crees. El material está pensado para el pequeño productor: se explica cómo montar desde un tanque de geomembrana en el patio hasta un estanque en tierra, con la densidad correcta de peces para cada uno. Antes de comprar nada, la calculadora te dice cuánto pez cabe de verdad en el espacio que tienes y cuánto te costaría ese ciclo.</div></details>
+      <details class="q"><summary><span class="qn">03</span>¿Cómo y cuándo recibo el material?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">De inmediato. Apenas se confirma tu pago recibes por correo el acceso para descargar todo lo de tu plan: el Esencial incluye la guía y la calculadora; el Plan Completo incluye las 5 herramientas. Los abres en tu celular o computadora.</div></details>
-      <details class="q"><summary><span class="qn">03</span>¿Sirve para mi país y mi moneda?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+      <details class="q"><summary><span class="qn">04</span>¿Sirve para mi país y mi moneda?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Sí. Los ejemplos usan dólares como referencia, pero la calculadora está hecha para que pongas los precios y la moneda de tu ciudad. Funciona en cualquier país de habla hispana — tú defines la moneda.</div></details>
-      <details class="q"><summary><span class="qn">04</span>¿Es un curso en video o un PDF?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+      <details class="q"><summary><span class="qn">05</span>¿Es un curso en video o un PDF?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Son PDF y planillas, no video. El Plan Esencial trae la guía en PDF más la calculadora en Excel/Google Sheets; el Plan Completo suma dos guías más y una segunda planilla. Lo elegimos así a propósito: lo lees en una tarde y actúas, en vez de posponer horas de video.</div></details>
-      <details class="q"><summary><span class="qn">05</span>¿Y si no me gusta?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+      <details class="q"><summary><span class="qn">06</span>¿Y si no me gusta?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Tienes 7 días de garantía incondicional. Si no es para ti, te devolvemos el 100% de tu dinero con un simple correo. Sin preguntas.</div></details>
-      <details class="q"><summary><span class="qn">06</span>¿Por qué cuesta tan poco?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
+      <details class="q"><summary><span class="qn">07</span>¿Por qué cuesta tan poco?<svg class="ic pl"><use href="#i-arrow"/></svg></summary>
         <div class="a">Es un precio de lanzamiento, a propósito. Prefiero que este material llegue a mucha gente y recibir las primeras opiniones, antes que venderlo caro a unos pocos. El contenido es el mismo que en cursos que cuestan diez veces más — solo que directo al grano, sin relleno.</div></details>
     </div>
   </div>
@@ -785,10 +810,10 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 <!-- ====================================================== FINAL -->
 <section class="final sec">
   <div class="wrap">
-    <span class="eyebrow" style="color:#8FE0DE">Dos caminos</span>
-    <h2 style="margin-top:12px">Puedes sembrar y rezar… o sembrar sabiendo</h2>
-    <p>Hoy, por menos que un almuerzo, cambias la suerte por la certeza. En una tarde vas a saber — con tus propios números — si tu tanque da ganancia. Y si no da, lo sabrás <em>antes</em> de perder tu dinero. Esa tranquilidad no tiene precio; hoy empieza en $6,90.</p>
-    <a href="#oferta" class="btn btn-gold">Ver los dos planes <svg class="ic arw"><use href="#i-arrow"/></svg></a>
+    <span class="eyebrow" style="color:#8FE0DE">Dos formas de empezar</span>
+    <h2 style="margin-top:12px">Puedes empezar improvisando… o empezar sabiendo</h2>
+    <p>Todos arrancan igual: con más ganas que información. Lo que separa al que llega a su primera cosecha del que abandona en el mes 3 no es la suerte — es tener el paso a paso <em>y</em> los números <em>antes</em> de sembrar el primer alevín. Hoy, por menos que un almuerzo, tienes los dos.</p>
+    <a href="#oferta" class="btn btn-gold">Empezar desde cero hoy <svg class="ic arw"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
