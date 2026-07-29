@@ -388,13 +388,39 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
   .chip.c1{right:2%}.chip.c2{right:0}
   .astrip{grid-template-columns:1fr;gap:22px;max-width:340px;margin-left:auto;margin-right:auto}
   .astat .big{font-size:2.4rem}
-  /* en móvil el banner del kit repite la imagen que ya va dentro del plan
-     y empuja el precio fuera de pantalla — se oculta para llegar antes al CTA */
-  .kitbanner{display:none}
+  .kitbanner{margin-bottom:20px}
   .price .now{font-size:2.9rem}.timer .cell{min-width:56px}
-  .plan{padding:26px 22px 28px}.plan.best{padding-top:42px}
-  .plan .pprice .now{font-size:2.5rem}
+  /* Los dos planes lado a lado: el visitante llega del anuncio buscando
+     "$6,90" y tiene que ver ese precio sin rolar.                        */
+  .plans{grid-template-columns:1fr 1fr;gap:8px;max-width:none;align-items:stretch}
+  .plan{padding:22px 12px 16px;border-radius:14px}
+  .plan.best{order:0;padding-top:38px}
+  .plan .pname{font-size:.6rem;letter-spacing:.1em}
+  .plan h3{font-size:1.02rem;line-height:1.15}
+  .plan .ptag{font-size:.78rem;margin-bottom:12px;line-height:1.35}
+  .plan .plist{gap:7px;margin-bottom:14px}
+  .plan .plist li{font-size:.78rem;gap:6px;line-height:1.34}
+  .plan .plist .ic{width:1em;height:1em}
+  .plan .combo{display:none}
+  .plan .save{font-size:.6rem;letter-spacing:.04em;padding:5px 8px}
+  .plan .pnote2{font-size:.7rem;margin-bottom:12px}
+  .plan .pprice{gap:6px;flex-wrap:wrap}
+  .plan .pprice .now{font-size:1.8rem}
+  .plan .pprice .old{font-size:.82rem}
+  .plan .pprice .now sup{font-size:.62rem}
+  .plan .btn{font-size:.84rem;padding:13px 6px;gap:4px}
+  .plan .btn .arw{display:none}
+  .plan.best .flag{font-size:.56rem;letter-spacing:.03em;padding:6px 4px;line-height:1.25}
   .offerbox .top,.offerbox .stack,.priceblock{padding-left:22px;padding-right:22px}
+}
+@media (max-width:400px){
+  .plan{padding:20px 9px 14px}.plan.best{padding-top:34px}
+  .plan h3{font-size:.95rem}
+  .plan .ptag{font-size:.74rem}
+  .plan .plist li{font-size:.74rem}
+  .plan .pprice .now{font-size:1.5rem}
+  .plan .pprice .old{font-size:.76rem}
+  .plan .btn{font-size:.79rem;padding:12px 4px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -443,7 +469,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
         <div class="actions">
           <a href="#oferta" class="btn btn-gold">Quiero empezar desde cero
             <svg class="ic arw"><use href="#i-arrow"/></svg></a>
-          <a href="#recibir" class="btn btn-line">Ver qué incluye</a>
+          <a href="#oferta" class="btn btn-line">Ver los planes</a>
         </div>
         <div class="reassure"><svg class="ic"><use href="#i-shield"/></svg>
           Sin experiencia previa · Acceso inmediato · Garantía de 7 días</div>
@@ -673,8 +699,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
       <!-- ---------- PLAN ESENCIAL ---------- -->
       <div class="plan">
         <span class="pname">Plan Esencial</span>
-        <h3>Solo los números</h3>
-        <p class="ptag">Si ya tienes tanque montado y solo te falta la parte financiera.</p>
+        <h3>Empieza por los números</h3>
+        <p class="ptag">La guía y la calculadora para arrancar sabiendo si te conviene.</p>
         <ul class="plist">
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Guía Tilapia Rentable</b> — inversión, costos y cómo vender</span></li>
           <li><svg class="ic"><use href="#i-check"/></svg><span><b>Calculadora de ROI</b> editable, con los precios de tu ciudad</span></li>
@@ -691,7 +717,7 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
 
       <!-- ---------- PLAN COMPLETO ---------- -->
       <div class="plan best">
-        <span class="flag">⭐ Si empiezas de cero, es este · Ahorras $46</span>
+        <span class="flag">⭐ El más elegido · Ahorras $46</span>
         <span class="pname">Plan Completo</span>
         <h3>De cero a tu primer tanque</h3>
         <p class="ptag">El montaje paso a paso <em>y</em> los números. Las 5 herramientas juntas.</p>
@@ -712,8 +738,8 @@ footer .fine{font-family:var(--mono);font-size:.72rem;margin-top:10px;opacity:.7
     </div>
 
     <p style="text-align:center;color:#B7D4D3;margin-top:24px;font-size:1rem;max-width:56ch;margin-left:auto;margin-right:auto">
-      ¿No sabes cuál elegir? Si <b>nunca criaste tilapia</b>, el que necesitas es el
-      <b style="color:#F4C674">Plan Completo</b> — es el único que trae el montaje del tanque paso a paso.
+      Con los dos empiezas hoy mismo. El <b style="color:#F4C674">Plan Completo</b> suma el montaje
+      del tanque paso a paso, el plan de alimentación y la proyección a 12 meses.
     </p>
 
     <div class="pay" style="color:#B7D4D3;margin-top:26px">
